@@ -3,6 +3,8 @@ import { Inter, Noto_Sans_JP } from "next/font/google"; // Corrected import
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { SITE_METADATA } from "@/lib/constants";
+import { StructuredData } from "@/components/StructuredData";
+
 
 // Fonts
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
@@ -30,6 +32,7 @@ export default function RootLayout({
   return (
     <html lang="ja" className="scroll-smooth">
       <body className={cn(inter.variable, notoSansJP.variable, "font-sans min-h-screen flex flex-col")}>
+        <StructuredData />
         {children}
       </body>
     </html>

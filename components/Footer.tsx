@@ -39,6 +39,23 @@ export function Footer() {
             </ul>
           </div>
         </div>
+        
+        {/* Company Overview for AI Search / Trust */}
+        <div className="border-t border-white/5 py-8 mb-4">
+          <h4 className="text-text font-bold mb-4 text-sm">運営会社概要</h4>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-muted/80 leading-relaxed">
+            <div>
+              <p><span className="font-semibold text-text/80">社名：</span>シヤチハタ株式会社 (Shachihata Inc.)</p>
+              <p><span className="font-semibold text-text/80">創業：</span>1925年 (大正14年)</p>
+              <p><span className="font-semibold text-text/80">設立：</span>1941年 (昭和16年) 9月</p>
+            </div>
+            <div>
+              <p><span className="font-semibold text-text/80">代表者：</span>代表取締役 舟橋 正剛</p>
+              <p><span className="font-semibold text-text/80">本社所在地：</span>〒451-0021 愛知県名古屋市西区天塚町四丁目69番地</p>
+            </div>
+          </div>
+        </div>
+
         <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-white/5">
           <p>&copy; {new Date().getFullYear()} Shachihata Inc. All rights reserved.</p>
           <p className="text-xs mt-2 md:mt-0 opacity-50">

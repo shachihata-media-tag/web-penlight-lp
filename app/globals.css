@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0A0A0A;
+  --color-surface: #1A1A1A;
+  --color-surface2: #252525;
+  --color-border: #333333;
+  --color-text: #EDEDED;
+  --color-muted: #A1A1A1;
+  --color-accent: #F00035;
+  --color-accent2: #00E0FF;
+
+  --radius-card: 10px;
+  --radius-hero: 16px;
+  --radius-pill: 999px;
+
+  --shadow-subtle: 0 4px 20px rgba(0, 0, 0, 0.2);
+  --shadow-glow: 0 0 20px rgba(240, 0, 53, 0.3);
+
+  --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-float: float 6s ease-in-out infinite;
+
+  @keyframes float {
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+}
+
+/* Custom Utilities that use the theme variables */
+@layer components {
+  .container-custom {
+    max-width: 1120px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 24px;
+    /* 6 * 4px */
+    padding-right: 24px;
+
+    @media (min-width: 768px) {
+      padding-left: 32px;
+      padding-right: 32px;
+    }
+  }
+
+  .glass-panel {
+    background-color: rgb(var(--color-surface) / 0.5);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgb(255 255 255 / 0.1);
+  }
+}
+
+/* Global resets and font settings */
+:root {
+  font-family: var(--font-inter), var(--font-noto-sans-jp), sans-serif;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+
+body {
+  font-feature-settings: "palt";
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-muted);
+}

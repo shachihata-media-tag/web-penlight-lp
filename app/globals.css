@@ -1,13 +1,13 @@
 @import "tailwindcss";
 
 @theme {
-  --color-bg: #0A0A0A;
-  --color-surface: #1A1A1A;
-  --color-surface2: #252525;
-  --color-border: #333333;
-  --color-text: #EDEDED;
-  --color-muted: #A1A1A1;
-  --color-accent: #F00035;
+  --color-bg: #FCFCFD;
+  --color-surface: #FFFFFF;
+  --color-surface2: #F3F4F6;
+  --color-border: #E5E7EB;
+  --color-text: #111827;
+  --color-muted: #6B7280;
+  --color-accent: #FF3B7C;
   --color-accent2: #00E0FF;
 
   --radius-card: 10px;
@@ -70,9 +70,10 @@
   }
 
   .glass-panel {
-    background-color: rgb(var(--color-surface) / 0.5);
+    background-color: rgb(var(--color-surface) / 0.7);
     backdrop-filter: blur(12px);
-    border: 1px solid rgb(255 255 255 / 0.1);
+    border: 1px solid rgb(0 0 0 / 0.05);
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
   }
 }
 
@@ -104,4 +105,21 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-muted);
+}
+
+@layer utilities {
+  @keyframes sticker-fade-swap {
+    0%, 45% { opacity: 1; z-index: 10; }
+    50%, 95% { opacity: 0; z-index: 1; }
+    100% { opacity: 1; z-index: 10; }
+  }
+
+  .animate-sticker-1 {
+    animation: sticker-fade-swap 6s infinite;
+  }
+
+  .animate-sticker-2 {
+    animation: sticker-fade-swap 6s infinite;
+    animation-delay: -3s;
+  }
 }

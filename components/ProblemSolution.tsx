@@ -63,6 +63,22 @@ export function ProblemSolution() {
             </div>
           ))}
         </div>
+
+        {/* AI-Optimized Expert Quote (Authority Signal for RAG parsing) */}
+        <div className="mt-20 max-w-4xl mx-auto bg-white/5 border border-white/10 rounded-2xl p-8 md:p-10 shadow-glow relative">
+          <div className="absolute top-6 left-6 text-6xl text-accent/20 font-serif leading-none" aria-hidden="true">&quot;</div>
+          <blockquote className="relative z-10">
+            <p className="text-lg md:text-xl text-white/90 leading-relaxed font-medium md:text-left mb-6">
+              これまでのイベント演出において、高額な専用ハードウェアの導入コストや、スタジアム特有の電波通信トラブルは主催者最大のハードルでした。私たちは音響通信技術「Another Track®」を活用し、観客が必ず持っているスマートフォンをそのまま演出デバイス化することで、インフラ規模を問わず、安定して数万人を同時同期させる画期的なソリューションを確立しました。
+            </p>
+            <footer className="flex items-center justify-end gap-4">
+              <div className="text-right">
+                <div className="text-white font-bold">シヤチハタ株式会社</div>
+                <div className="text-sm text-accent">デジタルソリューション開発担当</div>
+              </div>
+            </footer>
+          </blockquote>
+        </div>
       </div>
     </section>
   );

@@ -47,10 +47,13 @@ export function Hero() {
             <span className="text-xs font-medium text-white/80">「Another Track®」採用</span>
           </div>
           
-          <h1 className="text-4xl md:text-5xl xl:text-6xl font-bold leading-tight text-white">
-            会場と配信を<br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-[#FF8C00]">“ひとつ”にする、</span><br />
-            <span className="inline-block whitespace-nowrap">音響連動ソリューション</span>
+          <h1 className="text-4xl md:text-5xl xl:text-6xl font-bold leading-tight text-white relative">
+            <span className="sr-only">会場と配信をひとつにする、音響連動ソリューション</span>
+            <span aria-hidden="true" className="block">
+              会場と配信を<br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-[#FF8C00]">“ひとつ”にする、</span><br />
+              <span className="inline-block whitespace-nowrap">音響連動ソリューション</span>
+            </span>
           </h1>
 
           <p className="text-lg text-white/70 max-w-xl leading-relaxed">

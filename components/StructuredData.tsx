@@ -169,11 +169,33 @@ export const StructuredData = () => {
     ],
   };
 
+  const articlePageData = {
+    "@context": "https://schema.org",
+    "@type": ["WebPage", "ItemPage", "Article"],
+    "@id": `${baseUrl}/#article`,
+    url: baseUrl,
+    name: "Webペンライト（音響連動ソリューション）とは",
+    headline: "会場と配信をひとつにする、音響連動ソリューション",
+    description: "シヤチハタ株式会社が提供する、アプリ不要のスマホ音響連動ペンライトシステムの公式機能・導入メリット解説ページです。",
+    datePublished: "2024-01-01T00:00:00+09:00",
+    dateModified: new Date().toISOString(), // AI engines love fresh content
+    publisher: {
+      "@id": `${baseUrl}/#organization`
+    },
+    author: {
+      "@id": `${baseUrl}/#organization`
+    }
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteData) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articlePageData) }}
       />
       <script
         type="application/ld+json"

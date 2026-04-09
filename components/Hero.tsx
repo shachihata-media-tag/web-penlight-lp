@@ -23,14 +23,14 @@ export function Hero() {
     <section id="hero" className="relative z-0 pt-32 pb-20 overflow-hidden min-h-screen flex items-center">
       
       {/* Video Background */}
-      <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden bg-black">
         <video
           autoPlay
           loop
           muted
           playsInline
           preload="metadata"
-          className="absolute top-0 left-0 w-full h-full object-cover"
+          className="absolute top-0 left-0 w-full h-full object-cover bg-black"
         >
           <source src="/video/webpenlight.mp4" type="video/mp4" />
         </video>

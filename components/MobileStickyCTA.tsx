@@ -19,13 +19,13 @@ export function MobileStickyCTA() {
   return (
     <div
       className={cn(
-        "fixed bottom-0 left-0 right-0 p-4 bg-bg/80 backdrop-blur-lg border-t border-white/10 z-40 transition-transform duration-300 md:hidden",
+        "fixed bottom-0 left-0 right-0 p-4 bg-bg/80 backdrop-blur-lg border-t border-border/50 z-40 transition-transform duration-300 md:hidden shadow-lg",
         isVisible ? "translate-y-0" : "translate-y-full"
       )}
     >
       <Link
         href="#contact"
-        className="flex items-center justify-center w-full py-3.5 text-sm font-bold text-bg bg-accent rounded-pill shadow-glow"
+        className="flex items-center justify-center w-full py-3.5 text-sm font-bold text-white bg-accent rounded-pill shadow-glow"
       >
         お問い合わせ
       </Link>

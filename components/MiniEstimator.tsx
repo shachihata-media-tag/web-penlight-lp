@@ -17,32 +17,32 @@ export function MiniEstimator() {
   const triggerLabels = ["~2,500回", "~10,000回", "~50,000回", "それ以上"];
 
   return (
-    <section id="pricing" className="py-24 bg-bg border-t border-white/5">
+    <section id="pricing" className="py-24 bg-transparent border-t border-border/50">
       <div className="container-custom">
         <div className="text-center mb-12">
             <span className="text-accent text-sm font-bold tracking-widest uppercase mb-2 block">Pricing</span>
-            <h2 className="text-3xl font-bold">概算費用シミュレーション</h2>
+            <h2 className="text-3xl font-bold text-text">概算費用シミュレーション</h2>
         </div>
 
-        <div className="max-w-4xl mx-auto bg-surface border border-white/10 rounded-2xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
+        <div className="max-w-4xl mx-auto bg-surface border border-border rounded-2xl p-8 md:p-12 shadow-xl relative overflow-hidden group">
             {/* Background Glow */}
-            <div className="absolute top-0 right-0 w-64 h-64 bg-accent/5 rounded-full blur-[100px] pointer-events-none" />
+            <div className="absolute top-0 right-0 w-64 h-64 bg-accent/5 rounded-full blur-[100px] pointer-events-none transition-all group-hover:bg-accent/10" />
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                 <div className="space-y-8">
                     <div>
-                        <label className="text-sm font-bold text-white mb-4 block">
+                        <label className="text-sm font-bold text-text mb-4 block">
                             音響信号の埋め込み数
                         </label>
                         <div className="flex items-center gap-4">
                             <button 
                                 onClick={() => setSources(Math.max(1, sources - 1))}
-                                className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10"
+                                className="w-10 h-10 rounded-full border border-border text-text flex items-center justify-center hover:bg-surface2 transition-colors"
                             >-</button>
-                            <span className="text-2xl font-bold w-12 text-center">{sources}</span>
+                            <span className="text-2xl font-bold w-12 text-center text-text">{sources}</span>
                             <button 
                                 onClick={() => setSources(sources + 1)}
-                                className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10"
+                                className="w-10 h-10 rounded-full border border-border text-text flex items-center justify-center hover:bg-surface2 transition-colors"
                             >+</button>
                             <span className="text-sm text-muted">曲分</span>
                         </div>
@@ -50,7 +50,7 @@ export function MiniEstimator() {
                     </div>
 
                     <div>
-                        <label className="text-sm font-bold text-white mb-4 block">
+                        <label className="text-sm font-bold text-text mb-4 block">
                             想定トリガー回数（検知総数）
                         </label>
                         <input 
@@ -60,7 +60,7 @@ export function MiniEstimator() {
                             step="1" 
                             value={triggers}
                             onChange={(e) => setTriggers(parseInt(e.target.value))}
-                            className="w-full accent-accent h-2 bg-white/10 rounded-full appearance-none cursor-pointer"
+                            className="w-full accent-accent h-2 bg-border rounded-full appearance-none cursor-pointer outline-accent/50"
                         />
                         <div className="flex justify-between mt-2 text-xs text-muted">
                             {triggerLabels.map((l, i) => (
@@ -70,9 +70,9 @@ export function MiniEstimator() {
                     </div>
                 </div>
 
-                <div className="flex flex-col justify-center items-center md:items-end bg-bg/50 rounded-xl p-8 border border-white/5">
+                <div className="flex flex-col justify-center items-center md:items-end bg-surface2 rounded-xl p-8 border border-border shadow-inner">
                     <span className="text-sm text-muted mb-1">概算費用</span>
-                    <div className="text-4xl md:text-5xl font-bold text-white mb-2">
+                    <div className="text-4xl md:text-5xl font-bold text-accent mb-2">
                         ¥{total.toLocaleString()}~
                     </div>
                     <span className="text-xs text-muted/60 mb-6">※税抜価格</span>

@@ -10,16 +10,16 @@ export function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section id="faq" className="py-24 bg-bg">
+    <section id="faq" className="py-24 bg-transparent">
       <div className="container-custom max-w-3xl">
-        <h2 className="text-3xl font-bold mb-12 text-center">よくあるご質問</h2>
+        <h2 className="text-3xl font-bold mb-12 text-center text-text">よくあるご質問</h2>
         
         <div className="space-y-4">
           {FAQS.map((item, i) => (
-            <div key={i} className="border border-white/5 rounded-lg bg-surface overflow-hidden">
+            <div key={i} className="border border-border/50 rounded-lg bg-surface overflow-hidden shadow-sm hover:shadow-md transition-shadow">
               <button
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
-                className="w-full flex items-center justify-between p-6 text-left hover:bg-white/5 transition-colors"
+                className="w-full flex items-center justify-between p-6 text-left hover:bg-surface2 transition-colors"
                 aria-expanded={openIndex === i}
               >
                 <span className="font-bold text-sm md:text-base pr-8">{item.q}</span>

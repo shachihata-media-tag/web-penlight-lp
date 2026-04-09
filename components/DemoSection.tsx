@@ -4,7 +4,7 @@ import { Smartphone, Volume2 } from "lucide-react";
 
 export function DemoSection() {
   return (
-    <section className="py-24 bg-bg border-t border-white/5 relative overflow-hidden">
+    <section className="py-24 bg-transparent border-t border-border/50 relative overflow-hidden">
       <div className="container-custom relative z-10">
         <div className="text-center mb-16">
           <span className="text-accent font-bold tracking-wider text-sm uppercase mb-2 block">
@@ -21,10 +21,10 @@ export function DemoSection() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Step 1: QR Code */}
-          <div className="bg-surface border border-white/5 rounded-card p-8 text-center relative group">
+          <div className="bg-surface border border-border rounded-card p-8 text-center relative group hover:shadow-lg transition-shadow">
             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-accent/50 to-transparent opacity-50" />
             
-            <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-accent/10 text-accent mb-6">
+            <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-surface2 border border-border text-text mb-6">
               <Smartphone size={24} />
             </div>
 
@@ -46,10 +46,10 @@ export function DemoSection() {
           </div>
 
           {/* Step 2: Vimeo */}
-          <div className="bg-surface border border-white/5 rounded-card p-8 text-center relative group">
+          <div className="bg-surface border border-border rounded-card p-8 text-center relative group hover:shadow-lg transition-shadow">
             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent to-accent/50 opacity-50" />
 
-            <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-accent/10 text-accent mb-6">
+            <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-surface2 border border-border text-text mb-6">
               <Volume2 size={24} />
             </div>
 
@@ -59,7 +59,7 @@ export function DemoSection() {
               この動画を再生すると光が連動します。
             </p>
 
-            <div className="aspect-video w-full bg-black rounded-lg overflow-hidden border border-white/10 relative">
+            <div className="aspect-video w-full bg-black rounded-lg overflow-hidden border border-border/50 relative shadow-inner">
                <iframe 
                 src="https://player.vimeo.com/video/812654612?title=0&byline=0&portrait=0" 
                 className="absolute top-0 left-0 w-full h-full" 

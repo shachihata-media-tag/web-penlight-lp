@@ -21,15 +21,15 @@ export function ChecklistBuilder() {
   ];
 
   return (
-    <section className="py-24 bg-surface border-y border-white/5">
+    <section className="py-24 bg-transparent border-y border-border/50">
       <div className="container-custom">
-        <h2 className="text-3xl font-bold mb-12 text-center">導入までの流れ</h2>
+        <h2 className="text-3xl font-bold mb-12 text-center text-text">導入までの流れ</h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           {/* Controls */}
           <div className="lg:col-span-4 space-y-8">
-             <div className="bg-bg p-6 rounded-card border border-white/10">
-               <h3 className="font-bold mb-4 flex items-center gap-2">
+             <div className="bg-surface2 p-6 rounded-card border border-border">
+               <h3 className="font-bold mb-4 flex items-center gap-2 text-text">
                  <SettingsIcon /> 前提条件
                </h3>
                
@@ -44,8 +44,8 @@ export function ChecklistBuilder() {
                          className={cn(
                            "text-xs py-2 rounded border transition-colors",
                            audience === s 
-                             ? "bg-white text-bg border-white" 
-                             : "bg-surface border-white/10 text-muted hover:border-white/30"
+                             ? "bg-accent text-white border-accent" 
+                             : "bg-surface border-border text-muted hover:border-accent/50 hover:text-text"
                          )}
                        >
                          {s === "small" ? "~500" : s === "medium" ? "~5000" : "5000~"}
@@ -61,7 +61,7 @@ export function ChecklistBuilder() {
                         onClick={() => setStreaming(!streaming)}
                         className={cn(
                           "w-12 h-6 rounded-full transition-colors relative",
-                          streaming ? "bg-accent" : "bg-white/10"
+                          streaming ? "bg-accent" : "bg-border"
                         )}
                       >
                         <div className={cn(
@@ -80,7 +80,7 @@ export function ChecklistBuilder() {
                         onClick={() => setLine(!line)}
                         className={cn(
                           "w-12 h-6 rounded-full transition-colors relative",
-                          line ? "bg-[#06C755]" : "bg-white/10"
+                          line ? "bg-[#06C755]" : "bg-border"
                         )}
                       >
                         <div className={cn(
@@ -88,7 +88,7 @@ export function ChecklistBuilder() {
                           line ? "translate-x-6" : "translate-x-0"
                         )} />
                       </button>
-                      <span className="text-sm font-bold text-white/90">{line ? "あり" : "なし"}</span>
+                      <span className="text-sm font-bold text-text">{line ? "あり" : "なし"}</span>
                     </div>
                  </div>
                </div>
@@ -99,11 +99,11 @@ export function ChecklistBuilder() {
           <div className="lg:col-span-8">
             <div className="space-y-4">
                {steps.map((step, i) => (
-                 <div key={i} className="flex items-center gap-4 p-4 bg-bg/50 border border-white/5 rounded-lg">
+                 <div key={i} className="flex items-center gap-4 p-4 bg-surface border border-border rounded-lg shadow-sm">
                    <div className="w-24 text-xs font-mono text-muted text-right flex-shrink-0">
                      {step.weeks}
                    </div>
-                   <div className="w-8 h-8 rounded-full bg-surface border border-white/10 flex items-center justify-center flex-shrink-0 text-muted">
+                   <div className="w-8 h-8 rounded-full bg-surface2 border border-border flex items-center justify-center flex-shrink-0 text-muted">
                      {i + 1}
                    </div>
                    <div className="flex-1">
@@ -112,7 +112,7 @@ export function ChecklistBuilder() {
                    <div className={cn(
                      "px-3 py-1 text-xs rounded-full border",
                      step.owner === "Shachihata" ? "border-accent/30 text-accent bg-accent/5" :
-                     step.owner === "Client" ? "border-white/20 text-muted" :
+                     step.owner === "Client" ? "border-border text-muted bg-surface2" :
                      "border-accent2/30 text-accent2 bg-accent2/5"
                    )}>
                      {step.owner}

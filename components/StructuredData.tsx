@@ -1,13 +1,25 @@
-import { FAQS } from "@/lib/constants";
+import { FAQS, SITE_METADATA } from "@/lib/constants";
 
 export const StructuredData = () => {
+  const websiteData = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": SITE_METADATA.siteName,
+    "url": SITE_METADATA.url,
+    "description": SITE_METADATA.description,
+    "publisher": {
+      "@type": "Organization",
+      "name": "Shachihata Inc."
+    }
+  };
+
   const organizationData = {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Shachihata Inc.",
     "alternateName": "シヤチハタ株式会社",
-    "url": "https://www.shachihata.co.jp/",
-    "logo": "https://www.shachihata.co.jp/assets/img/common/header/logo.svg", // Best guess for logo, or omit if unsure. Using generic logic or omitting for safety? Better to omit specific image if unsafe, but highly likely.
+    "url": SITE_METADATA.url,
+    "logo": `${SITE_METADATA.url}/shachihata-logo.png`,
     "foundingDate": "1941-09-24",
     "address": {
       "@type": "PostalAddress",
@@ -31,26 +43,24 @@ export const StructuredData = () => {
 
   const productData = {
     "@context": "https://schema.org",
-    "@type": "Product",
-    "name": "Sound-Synced WEB Penlight",
-    "alternateName": "音響連動WEBペンライト",
-    "description": "会場と配信を“ひとつ”にする、音響連動WEBペンライト。アプリインストール不要、QRコードで即参加。",
+    "@type": ["Product", "SoftwareApplication"],
+    "name": "音響連動スマホペンライト（音響連動ソリューション）",
+    "alternateName": "Sound-Synced WEB Penlight",
+    "description": "会場と配信を“ひとつ”にする、音響連動スマホペンライト。アプリインストール不要、QRコードで即参加できるイベント最適化ツール。",
+    "applicationCategory": "MultimediaApplication",
+    "operatingSystem": "All",
     "brand": {
       "@type": "Brand",
       "name": "Shachihata"
     },
+    "category": "B2B Service",
     "offers": {
       "@type": "Offer",
       "priceCurrency": "JPY",
-      "availability": "https://schema.org/InStock",
-      "price": "0", // It's a B2B service mainly, pricing is "contact us". But schema likes a price. Maybe omit price or use AggregateOffer.
-      // Better to use AggregateRating or just description if price is variable.
-      // Let's omit price and use "availability": "https://schema.org/OnlineOnly" if possible.
-      "url": "https://www.shachihata.co.jp/" 
+      "availability": "https://schema.org/OnlineOnly",
+      "url": SITE_METADATA.url
     }
   };
-  
-  // Refine Product: Since it's a B2B service/solution, "Service" might be better, but "Product" is standard for physical/software products.
   
   const faqData = {
     "@context": "https://schema.org",
@@ -67,6 +77,10 @@ export const StructuredData = () => {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteData) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationData) }}

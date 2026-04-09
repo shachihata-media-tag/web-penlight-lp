@@ -50,6 +50,9 @@ export const FAQS = [
 ];
 
 export const SITE_METADATA = {
-  title: "音響連動WEBペンライト | Shachihata Inc.",
-  description: "シヤチハタ株式会社が提供する「音響連動WEBペンライト」。専用アプリ不要、QRコードを読み込むだけでスマホがペンライトに早変わり。ライブ会場と配信視聴者を光でつなぐ次世代のイベント演出ソリューションです。",
+  title: "音響連動ソリューション | Shachihata Inc.",
+  description: "シヤチハタ株式会社が提供する「音響連動ソリューション」。専用アプリ不要のスマホ連動から、本格的な物理ペンライト、物販グッズまで。ライブ会場と配信視聴者を光でつなぐ次世代のイベント演出パッケージです。",
+  siteName: "Shachihata 音響連動ソリューション",
+  keywords: ["Webペンライト", "スマホ連動ペンライト", "シヤチハタ", "音響連動", "ライブ演出", "イベント演出", "ペンライト", "観客参加型"],
+  url: "https://shachihata-x-light.com",
 };

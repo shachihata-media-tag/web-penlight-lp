@@ -1,0 +1,87 @@
+<div class="split">
+  <!-- Option 1: Simple Fade -->
+  <div class="mockup" style="flex: 1; max-width: 400px; margin: 0 auto;">
+    <div class="mockup-header" style="text-align: center; font-weight: bold; padding: 10px;">A: シンプルなフェード切り替え</div>
+    <div class="mockup-body" style="padding: 20px; background: #f8f9fa;">
+      <div style="aspect-ratio: 4/5; width: 100%; max-width: 250px; margin: 0 auto; border-radius: 2.5rem; border: 1px solid #e2e8f0; background: linear-gradient(to bottom, #ffffff, #f1f5f9); position: relative; overflow: hidden; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);">
+        <!-- Mock Phone Elements -->
+        <div style="position: absolute; top: 15px; left: 50%; transform: translateX(-50%); width: 60px; height: 15px; background: #e2e8f0; border-radius: 10px;"></div>
+        <div style="position: absolute; top: 40px; right: 20px; width: 30px; height: 30px; background: #e2e8f0; border-radius: 50%;"></div>
+        
+        <!-- Sticker Area Content -->
+        <div style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 20px;">
+           <!-- CSS Animation to swap images -->
+           <style>
+             @keyframes fadeSwap {
+               0%, 45% { opacity: 1; z-index: 10; }
+               50%, 95% { opacity: 0; z-index: 1; }
+               100% { opacity: 1; z-index: 10; }
+             }
+             .img-swap-1 { animation: fadeSwap 6s infinite; }
+             .img-swap-2 { animation: fadeSwap 6s infinite; animation-delay: -3s; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 70%; }
+           </style>
+           <div style="position: relative; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
+             <img src="/images/スマホペンライトデコシールPKイメージ_野球チームバラエティ.png" class="img-swap-1" style="width: 70%; height: auto; object-fit: contain; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));" alt="Variety">
+             <img src="/images/スマホペンライトデコシールPKイメージ_野球チームマスコット.png" class="img-swap-2" style="height: auto; object-fit: contain; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));" alt="Mascot">
+           </div>
+        </div>
+      </div>
+      <div style="margin-top: 20px; text-align: center; font-size: 0.9em; color: #64748b;">
+        <p>同じ位置でシール画像だけが</p>
+        <p>ふわっと切り替わります。</p>
+      </div>
+      <div style="margin-top: 15px; text-align: center;">
+        <button class="mock-button" data-choice="fade" onclick="toggleSelect(this)" style="padding: 10px 20px; background: #3b82f6; color: white; border: none; border-radius: 6px; cursor: pointer;">この案を選ぶ (A)</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Option 2: Slide up with text -->
+  <div class="mockup" style="flex: 1; max-width: 400px; margin: 0 auto;">
+    <div class="mockup-header" style="text-align: center; font-weight: bold; padding: 10px;">B: スライド＆キャプション付き</div>
+    <div class="mockup-body" style="padding: 20px; background: #f8f9fa;">
+      <div style="aspect-ratio: 4/5; width: 100%; max-width: 250px; margin: 0 auto; border-radius: 2.5rem; border: 1px solid #e2e8f0; background: linear-gradient(to bottom, #ffffff, #f1f5f9); position: relative; overflow: hidden; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);">
+        <!-- Mock Phone Elements -->
+        <div style="position: absolute; top: 15px; left: 50%; transform: translateX(-50%); width: 60px; height: 15px; background: #e2e8f0; border-radius: 10px; z-index: 20;"></div>
+        <div style="position: absolute; top: 40px; right: 20px; width: 30px; height: 30px; background: #e2e8f0; border-radius: 50%; z-index: 20;"></div>
+        
+        <!-- Sticker Area Content -->
+        <div style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; padding-top: 40px;">
+           <style>
+             @keyframes slideSwapCont {
+               0%, 45% { transform: translateY(0); }
+               50%, 95% { transform: translateY(-100%); }
+               100% { transform: translateY(0); }
+             }
+           </style>
+           <div style="width: 100%; height: 100%; overflow: hidden; position: relative;">
+              <div style="width: 100%; height: 200%; transition: transform 0.5s ease; animation: slideSwapCont 8s infinite;">
+                 <!-- Slide 1 -->
+                 <div style="width: 100%; height: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                    <img src="/images/スマホペンライトデコシールPKイメージ_野球チームバラエティ.png" style="width: 65%; height: auto; object-fit: contain; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));" alt="Variety">
+                    <div style="font-size: 10px; font-weight: bold; color: #64748b; margin-top: 15px; background: #f1f5f9; padding: 4px 8px; border-radius: 12px;">バラエティセット例</div>
+                 </div>
+                 <!-- Slide 2 -->
+                 <div style="width: 100%; height: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                    <img src="/images/スマホペンライトデコシールPKイメージ_野球チームマスコット.png" style="width: 65%; height: auto; object-fit: contain; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));" alt="Mascot">
+                    <div style="font-size: 10px; font-weight: bold; color: #64748b; margin-top: 15px; background: #f1f5f9; padding: 4px 8px; border-radius: 12px;">マスコットセット例</div>
+                 </div>
+              </div>
+           </div>
+        </div>
+      </div>
+      <div style="margin-top: 20px; text-align: center; font-size: 0.9em; color: #64748b;">
+        <p>下から上へとスライドし、</p>
+        <p>簡単な説明文も添えます。</p>
+      </div>
+      <div style="margin-top: 15px; text-align: center;">
+        <button class="mock-button" data-choice="slide" onclick="toggleSelect(this)" style="padding: 10px 20px; background: #3b82f6; color: white; border: none; border-radius: 6px; cursor: pointer;">この案を選ぶ (B)</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div style="text-align: center; margin-top: 40px; padding: 20px; background: #f8f9fa; border-radius: 8px;">
+  <h3>どういった見せ方がお好みですか？</h3>
+  <p class="subtitle">端末のターミナル（チャット欄）に、どちらの案が良いか、またはもっとこうしたいというご要望を入力してください。</p>
+</div>

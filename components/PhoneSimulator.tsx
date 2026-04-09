@@ -86,7 +86,7 @@ export function PhoneSimulator({ color, pattern, status, logoUrl, className, int
         </div>
 
         {/* Bottom Status Area */}
-        <div className='h-32 bg-surface/90 backdrop-blur-md border-t border-white/5 p-4 flex flex-col items-center justify-between z-10'>
+        <div className='h-32 bg-surface2/90 backdrop-blur-md border-t border-border/50 p-4 flex flex-col items-center justify-between z-10'>
           <div className='flex flex-col items-center gap-2'>
             <div
               className={cn(
@@ -98,14 +98,14 @@ export function PhoneSimulator({ color, pattern, status, logoUrl, className, int
           </div>
 
           {status === 'detecting' && (
-            <div className='w-full h-1 bg-white/10 rounded-full overflow-hidden'>
+            <div className='w-full h-1 bg-border rounded-full overflow-hidden'>
               <div className='h-full bg-accent animate-progress-indeterminate' />
             </div>
           )}
         </div>
 
         {/* Home Bar */}
-        <div className='absolute bottom-2 left-1/2 -translate-x-1/2 w-32 h-1 bg-white/20 rounded-full z-20' />
+        <div className='absolute bottom-2 left-1/2 -translate-x-1/2 w-32 h-1 bg-muted/20 rounded-full z-20' />
       </div>
 
       {/* Reflections / Gloss */}

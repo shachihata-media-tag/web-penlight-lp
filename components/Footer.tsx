@@ -2,13 +2,13 @@ import Image from 'next/image';
 
 export function Footer() {
   return (
-    <footer className='bg-surface py-12 border-t border-white/5 text-sm text-muted'>
+    <footer className='bg-transparent py-12 border-t border-border/50 text-sm text-muted'>
       <div className='container-custom'>
         <div className='grid grid-cols-1 md:grid-cols-4 gap-8 mb-12'>
           <div className='col-span-1 md:col-span-2'>
-            <Image src='/shachihata-logo.png' alt='Shachihata' width={120} height={40} className='h-8 w-auto object-contain mb-4' />
+            <Image src='/shachihata-logo.png' alt='Shachihata' width={120} height={40} className='h-8 w-auto object-contain mb-4 brightness-0' />
             <p className='leading-relaxed opacity-80'>
-              音響連動WEBペンライト
+              音響連動スマホペンライト
               <br />
               世界中の会場と配信を、ひとつの光でつなぐ。
             </p>
@@ -51,7 +51,7 @@ export function Footer() {
         </div>
 
         {/* Company Overview for AI Search / Trust */}
-        <div className='border-t border-white/5 py-8 mb-4'>
+        <div className='border-t border-border/50 py-8 mb-4'>
           <h4 className='text-text font-bold mb-4 text-sm'>運営会社概要</h4>
           <div className='grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-muted/80 leading-relaxed'>
             <div>
@@ -76,7 +76,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className='flex flex-col md:flex-row justify-between items-center pt-8 border-t border-white/5'>
+        <div className='flex flex-col md:flex-row justify-between items-center pt-8 border-t border-border/50'>
           <p>&copy; {new Date().getFullYear()} Shachihata Inc. All rights reserved.</p>
           <p className='text-xs mt-2 md:mt-0 opacity-50'>Design for intended functionality demo only.</p>
         </div>

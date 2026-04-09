@@ -1,7 +1,8 @@
 import { MetadataRoute } from "next";
+import { SITE_METADATA } from "@/lib/constants";
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = process.env.NEXT_PUBLIC_URL || "https://penlight.shachihata.co.jp";
+  const baseUrl = SITE_METADATA.url;
 
   return {
     rules: {

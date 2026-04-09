@@ -336,7 +336,7 @@ export default function GoodsPage() {
                       : "border-transparent scale-100 opacity-60 group-hover:opacity-100"
                   } ${color.bg}`}
                 />
-                <span className="text-[10px] font-bold tracking-tight whitespace-nowrap px-1 text-white drop-shadow-[0_1px_3px_rgba(0,0,0,0.6)]">
+                <span className="text-[10px] font-bold whitespace-nowrap px-1 text-white drop-shadow-[0_1px_3px_rgba(0,0,0,0.6)]">
                   {color.name}
                 </span>
               </button>
@@ -400,7 +400,7 @@ export default function GoodsPage() {
                         sizes="128px"
                       />
                     </div>
-                    <span className={`text-[10px] font-bold tracking-tight transition-all ${
+                    <span className={`text-[10px] font-bold transition-all ${
                       selectedAssetIndex === index
                         ? "text-white drop-shadow-[0_1px_3px_rgba(0,0,0,0.6)]"
                         : "text-white/70 group-hover:text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.4)]"

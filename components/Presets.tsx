@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { PhoneSimulator } from './PhoneSimulator';
+import { TorchSimulator } from './TorchSimulator';
 import { DEMO_PRESETS, PENLIGHT_COLORS } from '@/lib/constants';
 import { cn } from '@/lib/utils';
 import { Play } from 'lucide-react';
@@ -20,10 +20,24 @@ export function Presets() {
 
     let step = 0;
     const interval = setInterval(() => {
-      // Simple mock sequence logic
+      // Simple mock sequence logic adapted for Torchlight
       const colorName = preset.sequence[step % preset.sequence.length];
-      const colorVal = PENLIGHT_COLORS.find((c) => c.name === colorName)?.value || '#000000';
-      setSimulatorColor(colorVal);
+      
+      if (colorName === 'Off') {
+        setSimulatorColor('#000000');
+        setSimulatorPattern('steady');
+      } else {
+        setSimulatorColor('#FFFF00'); // Standard torchlight color
+        
+        // Map preset to different pulse patterns
+        if (preset.id === 'intro') {
+          setSimulatorPattern('fast-blink');
+        } else if (preset.id === 'finale') {
+          setSimulatorPattern('blink');
+        } else {
+          setSimulatorPattern('steady');
+        }
+      }
       step++;
     }, 800); // Change every 800ms
 
@@ -31,7 +45,7 @@ export function Presets() {
   }, [activePreset]);
 
   return (
-    <section id='demos' className='py-24 bg-bg relative'>
+    <section id='demos' className='py-24 bg-transparent relative'>
       <div className='container-custom grid grid-cols-1 lg:grid-cols-2 gap-16 items-center'>
         <div>
           <span className='text-accent text-sm font-bold tracking-widest uppercase mb-2 block'>Presets</span>
@@ -40,6 +54,9 @@ export function Presets() {
             楽曲の展開に合わせたプリセット演出をご用意。
             <br />
             これらを組み合わせるだけで、プロフェッショナルな演出が可能です。
+            <span className='block mt-3 text-sm text-muted/80'>
+              ※スマホのトーチライトを使用する場合は、色の変化ではなくパルス（点滅）などの光り方が音響連動します。
+            </span>
           </p>
 
           <div className='space-y-4'>
@@ -56,16 +73,16 @@ export function Presets() {
                 }}
                 className={cn(
                   'w-full text-left p-6 rounded-xl border transition-all flex items-center justify-between group',
-                  activePreset === preset.id ? 'bg-surface2 border-accent/50 shadow-glow' : 'bg-surface border-white/5 hover:border-white/20'
+                  activePreset === preset.id ? 'bg-surface border-accent shadow-xl' : 'bg-surface2 border-border hover:border-accent/50'
                 )}>
                 <div>
-                  <h3 className={cn('text-lg font-bold mb-1', activePreset === preset.id ? 'text-white' : 'text-white')}>{preset.label}</h3>
+                  <h3 className={cn('text-lg font-bold mb-1', activePreset === preset.id ? 'text-accent' : 'text-text')}>{preset.label}</h3>
                   <p className='text-sm text-muted'>{preset.description}</p>
                 </div>
                 <div
                   className={cn(
                     'w-10 h-10 rounded-full flex items-center justify-center border transition-all',
-                    activePreset === preset.id ? 'bg-accent border-accent text-bg' : 'border-white/20 group-hover:border-white text-white'
+                    activePreset === preset.id ? 'bg-accent border-accent text-white' : 'border-border group-hover:border-accent text-muted group-hover:text-accent'
                   )}>
                   <Play size={16} fill={activePreset === preset.id ? 'currentColor' : 'none'} />
                 </div>
@@ -75,12 +92,11 @@ export function Presets() {
         </div>
 
         {/* Mini Simulator for Preview */}
-        <div className='flex justify-center bg-surface/30 p-8 rounded-3xl border border-white/5'>
-          <PhoneSimulator
+        <div className='flex justify-center bg-surface2 p-8 rounded-3xl border border-border'>
+          <TorchSimulator
             color={simulatorColor}
             pattern={simulatorPattern}
             status='synced'
-            logoUrl='/shachihata-logo.png' // Placeholder
             className='transform scale-90'
           />
         </div>

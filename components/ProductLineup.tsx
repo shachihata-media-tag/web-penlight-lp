@@ -6,21 +6,18 @@ const PRODUCTS = [
     id: "torch-sticker",
     title: (
       <>
-        <span className="inline-block">音響連動型スマホライト</span>
-        <br />
-        <span className="inline-block">＆</span>
+        <span className="inline-block">音響連動型スマホライト＆</span>
         <br />
         <span className="inline-block">立体シール</span>
       </>
     ),
     description:
-      "スマホの背面フラッシュライトを音響信号で制御し、専用シールを貼って楽しむ新体験。安価でありながら確かな連動感で会場を染め上げます。",
+      "スマホの背面フラッシュライトを音響信号で制御し、専用シールを貼って楽しむ新体験。人気の立体シール販売とスマホペンライトの合体で会場を染め上げます。",
     icon: Zap,
     features: [
       "最新のバックライト連動",
       "専用シールでカスタマイズ",
       "物販グッズとして展開可能",
-      "圧倒的な低コスト",
     ],
     status: "main",
     placeholderAspect: "aspect-[4/5]", // Tall image for smartphone back
@@ -56,7 +53,7 @@ const PRODUCTS = [
   },
   {
     id: "acrylic-stand",
-    title: "音響連動型アクリルスタンド",
+    title: "楽曲連動アクリルスタンド",
     description:
       "机の上がライブの最前列に。自宅からのオンライン配信視聴を盛り上げる、新しい推し活グッズです。",
     icon: MonitorPlay,
@@ -82,7 +79,7 @@ export function ProductLineup() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-20 lg:mb-32">
           {/* Text Content */}
           <div className="flex flex-col justify-center">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-5xl font-bold tracking-tight mb-6 text-text leading-tight">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-5xl font-bold mb-6 text-text leading-tight">
               あらゆるシーンを、<br />
               <span className="text-transparent bg-clip-text bg-gradient-to-b from-accent to-[#FF8C00]">
                 光でハックする。
@@ -108,7 +105,7 @@ export function ProductLineup() {
           {/* Text Content */}
           <div className="flex flex-col justify-center order-2 md:order-1">
 
-            <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight break-keep" style={{ wordBreak: 'auto-phrase' as any }}>{PRODUCTS[0].title}</h3>
+            <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 leading-tight break-keep" style={{ wordBreak: 'auto-phrase' as any }}>{PRODUCTS[0].title}</h3>
             <p className="text-muted text-lg md:text-xl leading-relaxed mb-8">
               {PRODUCTS[0].description}
             </p>
@@ -158,73 +155,83 @@ export function ProductLineup() {
         </div>
 
         {/* Merged Layout for remaining products */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 border border-border divide-y lg:divide-y-0 lg:divide-x divide-border bg-surface">
+        <h3 className="text-2xl md:text-3xl font-bold mb-8 text-text text-center">取扱アイテム</h3>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
           
           {/* Secondary Product */}
-          <div className="group relative overflow-hidden transition-all duration-500 hover:bg-surface2 flex flex-col">
-            <div className="p-8 sm:p-10 flex-1">
-               <h3 className="text-2xl font-bold mb-3">{PRODUCTS[1].title}</h3>
-               <p className="text-muted leading-relaxed mb-8 text-sm">
-                 {PRODUCTS[1].description}
-               </p>
-            </div>
-            {/* Image Placeholder */}
-            <div className="px-8 pb-8 pt-0 mt-auto">
-                <div className={cn(
-                  PRODUCTS[1].placeholderAspect,
-                  "w-full border border-border bg-gradient-to-tr from-surface2 to-surface relative overflow-hidden transition-all duration-500"
-                )}>
-                  <div className="absolute inset-0 flex flex-col items-center justify-center text-muted/40">
-                    <Sparkles className="w-8 h-8 mb-2 opacity-50" strokeWidth={1} />
-                    <span className="text-[10px] font-mono tracking-widest uppercase">Image Area</span>
+          <div className="group relative overflow-hidden rounded-2xl bg-border p-[1px] shadow-sm hover:shadow-lg transition-all duration-300">
+            <div className="absolute inset-[-100%] animate-[spin_3s_linear_infinite] opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,var(--color-accent)_50%,transparent_100%)]" />
+            <div className="relative flex h-full w-full flex-col bg-surface rounded-[15px] z-10 overflow-hidden transition-colors group-hover:bg-surface/95">
+              <div className="p-8 sm:p-10 flex-1">
+                 <h3 className="text-2xl font-bold mb-3">{PRODUCTS[1].title}</h3>
+                 <p className="text-muted leading-relaxed mb-8 text-sm">
+                   {PRODUCTS[1].description}
+                 </p>
+              </div>
+              {/* Image Placeholder */}
+              <div className="px-8 pb-8 pt-0 mt-auto">
+                  <div className={cn(
+                    PRODUCTS[1].placeholderAspect,
+                    "w-full border border-border bg-gradient-to-tr from-surface2 to-surface relative overflow-hidden transition-all duration-500 rounded-xl"
+                  )}>
+                    <div className="absolute inset-0 flex flex-col items-center justify-center text-muted/40">
+                      <Sparkles className="w-8 h-8 mb-2 opacity-50" strokeWidth={1} />
+                      <span className="text-[10px] font-mono tracking-widest uppercase">Image Area</span>
+                    </div>
                   </div>
-                </div>
+              </div>
             </div>
           </div>
 
           {/* Third Product */}
-          <div className="group relative overflow-hidden transition-all duration-500 hover:bg-surface2 flex flex-col">
-            <div className="p-8 pb-0 flex-1">
-               <h3 className="text-xl font-bold mb-3">{PRODUCTS[2].title}</h3>
-               <p className="text-muted text-sm leading-relaxed mb-6">
-                 {PRODUCTS[2].description}
-               </p>
-            </div>
-            <div className="px-8 pb-8 pt-4 mt-auto">
-                <div className={cn(
-                  PRODUCTS[2].placeholderAspect,
-                  "w-full max-w-[200px] mx-auto border border-border bg-surface2 relative overflow-hidden transition-all duration-500"
-                )}>
-                   <div className="absolute inset-0 flex flex-col items-center justify-center text-muted/30">
-                    <span className="text-[10px] font-mono tracking-widest uppercase">Image Area</span>
+          <div className="group relative overflow-hidden rounded-2xl bg-border p-[1px] shadow-sm hover:shadow-lg transition-all duration-300">
+            <div className="absolute inset-[-100%] animate-[spin_3s_linear_infinite] opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,var(--color-accent)_50%,transparent_100%)]" />
+            <div className="relative flex h-full w-full flex-col bg-surface rounded-[15px] z-10 overflow-hidden transition-colors group-hover:bg-surface/95">
+              <div className="p-8 pb-0 flex-1">
+                 <h3 className="text-xl font-bold mb-3">{PRODUCTS[2].title}</h3>
+                 <p className="text-muted text-sm leading-relaxed mb-6">
+                   {PRODUCTS[2].description}
+                 </p>
+              </div>
+              <div className="px-8 pb-8 pt-4 mt-auto">
+                  <div className={cn(
+                    PRODUCTS[2].placeholderAspect,
+                    "w-full max-w-[200px] mx-auto border border-border bg-surface2 relative overflow-hidden transition-all duration-500 rounded-xl"
+                  )}>
+                     <div className="absolute inset-0 flex flex-col items-center justify-center text-muted/30">
+                      <span className="text-[10px] font-mono tracking-widest uppercase">Image Area</span>
+                    </div>
                   </div>
-                </div>
+              </div>
             </div>
           </div>
 
           {/* Fourth Product (Coming Soon) */}
-          <div className="group relative overflow-hidden bg-surface2 transition-all duration-500 flex flex-col opacity-80 hover:opacity-100">
-             {/* Diagonal stripes for "Coming Soon" feel */}
-             <div className="absolute inset-0 bg-[repeating-linear-gradient(45deg,transparent,transparent_10px,rgba(0,0,0,0.02)_10px,rgba(0,0,0,0.02)_20px)]" />
-             
-             <div className="p-8 relative z-10 flex flex-col h-full">
-                <div className="flex justify-between items-start mb-6 lg:mb-12">
-                   <h3 className="text-xl font-bold text-muted group-hover:text-text transition-colors">{PRODUCTS[3].title}</h3>
-                   <span className="px-3 py-1 bg-black/5 text-[10px] font-mono tracking-widest text-muted border border-border">COMING SOON</span>
-                </div>
-                
-                <div className="mt-auto">
-                   <p className="text-muted/70 text-sm leading-relaxed max-w-sm mb-6">
-                     {PRODUCTS[3].description}
-                   </p>
-                   <div className="flex flex-wrap gap-2">
-                      {PRODUCTS[3].features.map((feature, fIdx) => (
-                        <div key={fIdx} className="text-[11px] text-muted bg-black/5 px-2 py-1">
-                           {feature}
-                        </div>
-                      ))}
-                   </div>
-                </div>
+          <div className="group relative overflow-hidden rounded-2xl bg-border p-[1px] opacity-80 hover:opacity-100 transition-all duration-300">
+             <div className="absolute inset-[-100%] animate-[spin_3s_linear_infinite] opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,var(--color-accent)_50%,transparent_100%)]" />
+             <div className="relative flex h-full w-full flex-col bg-surface2 rounded-[15px] z-10 overflow-hidden">
+               {/* Diagonal stripes for "Coming Soon" feel */}
+               <div className="absolute inset-0 bg-[repeating-linear-gradient(45deg,transparent,transparent_10px,rgba(0,0,0,0.02)_10px,rgba(0,0,0,0.02)_20px)]" />
+               
+               <div className="p-8 relative z-10 flex flex-col h-full">
+                  <div className="flex justify-between items-start mb-6 lg:mb-12">
+                     <h3 className="text-xl font-bold text-muted group-hover:text-text transition-colors">{PRODUCTS[3].title}</h3>
+                     <span className="px-3 py-1 bg-black/5 text-[10px] font-mono tracking-widest text-muted border border-border rounded">COMING SOON</span>
+                  </div>
+                  
+                  <div className="mt-auto">
+                     <p className="text-muted/70 text-sm leading-relaxed max-w-sm mb-6">
+                       {PRODUCTS[3].description}
+                     </p>
+                     <div className="flex flex-wrap gap-2">
+                        {PRODUCTS[3].features.map((feature, fIdx) => (
+                          <div key={fIdx} className="text-[11px] text-muted bg-black/5 px-2 py-1 rounded">
+                             {feature}
+                          </div>
+                        ))}
+                     </div>
+                  </div>
+               </div>
              </div>
           </div>
 

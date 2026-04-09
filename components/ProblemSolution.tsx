@@ -33,29 +33,29 @@ const PROBLEMS = [
 
 export function ProblemSolution() {
   return (
-    <section className="py-24 bg-bg border-t border-white/5">
+    <section className="py-24 bg-transparent border-t border-border/50">
       <div className="container-custom">
-        <h2 className="text-3xl font-bold text-center mb-16">
+        <h2 className="text-3xl font-bold text-center mb-16 text-text">
           従来の演出デバイスが抱える<br className="md:hidden"/>課題を解決
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {PROBLEMS.map((item, i) => (
-            <div key={i} className="group relative bg-surface border border-white/5 rounded-card p-6 hover:bg-surface2 transition-colors">
-              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-white/10 to-transparent group-hover:via-accent/50 transition-all" />
+            <div key={i} className="group relative bg-surface border border-border rounded-card p-6 hover:bg-surface2 transition-colors hover:shadow-lg">
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-border to-transparent group-hover:via-accent/50 transition-all" />
               
               <div className="mb-4 text-muted group-hover:text-accent transition-colors">
                 <item.icon size={32} />
               </div>
               
-              <h3 className="text-lg font-bold mb-2 text-white">{item.problem}</h3>
+              <h3 className="text-lg font-bold mb-2 text-text">{item.problem}</h3>
               <p className="text-sm text-muted leading-relaxed mb-6 h-16">
                 {item.text}
               </p>
 
-              <div className="pt-6 border-t border-white/5">
+              <div className="pt-6 border-t border-border/50">
                 <span className="block text-xs font-bold text-accent mb-1">SOLUTION</span>
-                <h4 className="text-xl font-bold text-white mb-2">{item.solution}</h4>
+                <h4 className="text-xl font-bold text-text mb-2">{item.solution}</h4>
                 <p className="text-sm text-text/80 leading-relaxed">
                   {item.solutionText}
                 </p>

@@ -1,6 +1,8 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/Hero";
+import { LogoCloud } from "@/components/LogoCloud";
+import { ProductLineup } from "@/components/ProductLineup";
 import { MobileStickyCTA } from "@/components/MobileStickyCTA";
 import { ProblemSolution } from "@/components/ProblemSolution";
 import { Walkthrough } from "@/components/Walkthrough";
@@ -18,18 +20,22 @@ import { DemoSection } from "@/components/DemoSection";
 
 export default function Home() {
   return (
-    <main className="bg-bg text-text min-h-screen selection:bg-accent selection:text-white">
+    <main className="text-text min-h-screen selection:bg-accent selection:text-white bg-transparent">
       <Header />
       
       <Hero />
       
+      <LogoCloud />
+
+      <ProductLineup />
+      
       <ProblemSolution />
       
-      <Walkthrough />
+      {/* <Walkthrough /> */}
       
       <Presets />
 
-      <section className="py-24 bg-surface/50">
+      <section className="py-24 bg-transparent border-t border-white/5">
         <div className="container-custom">
            <h2 className="text-3xl font-bold mb-12 text-center">実際の導入イメージ</h2>
            <VideoCard />
@@ -40,7 +46,7 @@ export default function Home() {
 
       <Specs />
       
-      <Customization />
+      {/* <Customization /> */}
 
       <MiniEstimator />
 

@@ -3,7 +3,7 @@ import { MessageSquare } from "lucide-react";
 export function LineSection() {
   return (
     <section className="py-24 bg-[#06C755]/5 border-y border-[#06C755]/10 relative overflow-hidden">
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#06C755]/10 rounded-full blur-[120px] pointer-events-none -z-10" />
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#06C755]/5 rounded-full blur-[120px] pointer-events-none -z-10 mix-blend-multiply" />
 
       <div className="container-custom">
         <div className="flex flex-col md:flex-row items-center gap-12">

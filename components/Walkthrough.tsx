@@ -35,11 +35,11 @@ export function Walkthrough() {
   const [activeStep, setActiveStep] = useState(1);
 
   return (
-    <section id="features" className="py-24 bg-surface border-y border-white/5 relative overflow-hidden">
+    <section id="features" className="py-24 bg-transparent border-y border-border/50 relative overflow-hidden">
       <div className="container-custom">
         <div className="text-center mb-16">
           <span className="text-accent text-sm font-bold tracking-widest uppercase mb-2 block">How It Works</span>
-          <h2 className="text-3xl md:text-4xl font-bold">参加は4ステップ</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-text">参加は4ステップ</h2>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -53,18 +53,18 @@ export function Walkthrough() {
                 className={cn(
                   "flex items-start gap-6 p-6 rounded-xl border transition-all cursor-pointer",
                   activeStep === step.id
-                    ? "bg-white/5 border-accent/50 shadow-glow"
-                    : "bg-transparent border-transparent hover:bg-white/5"
+                    ? "bg-surface border-accent/50 shadow-lg"
+                    : "bg-transparent border-transparent hover:bg-surface2"
                 )}
               >
                 <div className={cn(
                     "flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg transition-colors",
-                    activeStep === step.id ? "bg-accent text-white" : "bg-white/10 text-muted"
+                    activeStep === step.id ? "bg-accent text-white shadow-glow" : "bg-surface2 border border-border text-muted"
                 )}>
                   {step.id}
                 </div>
                 <div>
-                  <h3 className={cn("text-xl font-bold mb-2", activeStep === step.id ? "text-white" : "text-muted")}>
+                  <h3 className={cn("text-xl font-bold mb-2", activeStep === step.id ? "text-accent" : "text-muted")}>
                     {step.title}
                   </h3>
                   <p className="text-sm text-muted leading-relaxed">
@@ -76,16 +76,16 @@ export function Walkthrough() {
           </div>
 
           {/* Interactive Visual/Preview area */}
-          <div className="relative h-[500px] bg-bg rounded-3xl border border-white/10 flex items-center justify-center overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-radial from-white/5 to-transparent opacity-50" />
+          <div className="relative h-[500px] bg-surface2 rounded-3xl border border-border flex items-center justify-center overflow-hidden shadow-inner">
+            <div className="absolute inset-0 bg-gradient-radial from-white to-transparent opacity-50" />
             
             {/* Animated Icons based on step */}
             <div className="relative z-10 flex flex-col items-center gap-6 transition-all duration-500 key={activeStep}">
                {(() => {
                  const Icon = STEPS[activeStep - 1].icon;
-                 return <Icon size={120} className="text-white opacity-80" strokeWidth={1} />;
+                 return <Icon size={120} className="text-accent opacity-80" strokeWidth={1} />;
                })()}
-               <p className="text-xl font-bold text-white tracking-widest">STEP {activeStep}</p>
+               <p className="text-xl font-bold text-text tracking-widest">STEP {activeStep}</p>
             </div>
 
             {/* Step specific extra visuals */}

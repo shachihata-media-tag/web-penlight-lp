@@ -1,13 +1,14 @@
 import { MetadataRoute } from "next";
+import { SITE_METADATA } from "@/lib/constants";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_URL || "https://penlight.shachihata.co.jp"; // Assuming production URL or Env
+  const baseUrl = SITE_METADATA.url;
 
   return [
     {
       url: baseUrl,
       lastModified: new Date(),
-      changeFrequency: "monthly",
+      changeFrequency: "weekly",
       priority: 1,
     },
     {

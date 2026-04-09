@@ -30,7 +30,6 @@ export function Hero() {
           muted
           playsInline
           preload="metadata"
-          poster="/og-image.png"
           className="absolute top-0 left-0 w-full h-full object-cover"
         >
           <source src="/video/webpenlight.mp4" type="video/mp4" />

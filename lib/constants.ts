@@ -95,8 +95,8 @@ export const SITE_METADATA = {
     "配信 ペンライト 連動",
     "イベント 一体感 演出",
   ],
-  url: "https://shachihata-x-light.com",
-  ogImage: "https://shachihata-x-light.com/og-image.png",
+  url: "https://www.shachihata-x-light.com",
+  ogImage: "https://www.shachihata-x-light.com/og-image.png",
 };
 
 export const GOODS_METADATA = {

@@ -68,7 +68,7 @@ export const StructuredData = () => {
 
   const productData = {
     "@context": "https://schema.org",
-    "@type": ["Product", "SoftwareApplication"],
+    "@type": "SoftwareApplication",
     "@id": `${baseUrl}/#product`,
     name: "音響連動ソリューション（スマホペンライト）",
     alternateName: "Sound-Synced WEB Penlight",
@@ -83,13 +83,6 @@ export const StructuredData = () => {
     },
     manufacturer: {
       "@id": `${baseUrl}/#organization`,
-    },
-    category: "イベント演出ソリューション",
-    offers: {
-      "@type": "Offer",
-      priceCurrency: "JPY",
-      availability: "https://schema.org/OnlineOnly",
-      url: baseUrl,
     },
     featureList: [
       "専用アプリ不要 - QRコードで即参加",

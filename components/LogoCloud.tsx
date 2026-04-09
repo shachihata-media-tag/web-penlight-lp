@@ -6,48 +6,68 @@ export function LogoCloud() {
           導入実績・活用想定シーン
         </p>
         
-        {/* We use a simple flex wrap for the logos. In a real scenario, this could be a marquee. */}
-        <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
-          
-          {/* Placeholder Logos */}
-          <div className="flex items-center gap-2 text-white/80 hover:text-white transition-colors">
-             <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
-               <span className="font-bold text-sm">A</span>
-             </div>
-             <span className="font-bold tracking-wider text-sm">ArenaLive</span>
+        <div className="relative flex flex-col gap-4 md:gap-5 overflow-hidden py-4 max-w-[100vw] mx-auto opacity-90">
+          {/* 左右のフェードエッジ */}
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-12 md:w-32 bg-gradient-to-r from-bg to-transparent z-10"></div>
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-12 md:w-32 bg-gradient-to-l from-bg to-transparent z-10"></div>
+
+          {/* 1行目（左へスクロール） */}
+          <div className="flex w-max animate-marquee hover:[animation-play-state:paused]">
+            <div className="flex gap-3 md:gap-4 px-1.5 md:px-2">
+              {[
+                "プロ野球", "映画・エンターテインメント", "プロバスケットボール", 
+                "動画配信", "デジタルスタンプラリー", "来店キャンペーン", 
+                "商品訴求", "大手コンビニエンスストア", "アクリルスタンド"
+              ].map((tag, i) => (
+                <div key={`r1-1-${i}`} className="group flex items-center justify-center px-5 py-2.5 rounded-full border border-border bg-surface shadow-sm hover:border-accent hover:shadow-[0_0_15px_rgba(255,59,124,0.2)] transition-all duration-300 cursor-default hover:-translate-y-0.5 whitespace-nowrap shrink-0">
+                   <span className="text-accent/60 group-hover:text-accent group-hover:drop-shadow-[0_0_8px_var(--color-accent)] transition-all duration-300 mr-1 font-bold">#</span>
+                   <span className="font-bold tracking-widest text-sm text-muted group-hover:text-text transition-colors">{tag}</span>
+                </div>
+              ))}
+            </div>
+            {/* シームレス切り替え用の複製 */}
+            <div className="flex gap-3 md:gap-4 px-1.5 md:px-2">
+              {[
+                "プロ野球", "映画・エンターテインメント", "プロバスケットボール", 
+                "動画配信", "デジタルスタンプラリー", "来店キャンペーン", 
+                "商品訴求", "大手コンビニエンスストア", "アクリルスタンド"
+              ].map((tag, i) => (
+                <div key={`r1-2-${i}`} className="group flex items-center justify-center px-5 py-2.5 rounded-full border border-border bg-surface shadow-sm hover:border-accent hover:shadow-[0_0_15px_rgba(255,59,124,0.2)] transition-all duration-300 cursor-default hover:-translate-y-0.5 whitespace-nowrap shrink-0">
+                   <span className="text-accent/60 group-hover:text-accent group-hover:drop-shadow-[0_0_8px_var(--color-accent)] transition-all duration-300 mr-1 font-bold">#</span>
+                   <span className="font-bold tracking-widest text-sm text-muted group-hover:text-text transition-colors">{tag}</span>
+                </div>
+              ))}
+            </div>
           </div>
 
-          <div className="flex items-center gap-2 text-white/80 hover:text-white transition-colors">
-             <div className="w-8 h-8 rounded bg-white/20 flex items-center justify-center">
-               <span className="font-bold text-sm">V</span>
-             </div>
-             <span className="font-bold tracking-wider text-sm">V-Tuber Fes</span>
+          {/* 2行目（右へスクロール） */}
+          <div className="flex w-max animate-marquee-reverse hover:[animation-play-state:paused]">
+            <div className="flex gap-3 md:gap-4 px-1.5 md:px-2">
+              {[
+                "プロサッカー", "鉄道・交通機関", "音楽ライブイベント", 
+                "メタバース", "広告キャンペーン", "効果測定", 
+                "タイムセール", "ペンライト", "立体シール"
+              ].map((tag, i) => (
+                <div key={`r2-1-${i}`} className="group flex items-center justify-center px-5 py-2.5 rounded-full border border-border bg-surface shadow-sm hover:border-accent hover:shadow-[0_0_15px_rgba(255,59,124,0.2)] transition-all duration-300 cursor-default hover:-translate-y-0.5 whitespace-nowrap shrink-0">
+                   <span className="text-accent/60 group-hover:text-accent group-hover:drop-shadow-[0_0_8px_var(--color-accent)] transition-all duration-300 mr-1 font-bold">#</span>
+                   <span className="font-bold tracking-widest text-sm text-muted group-hover:text-text transition-colors">{tag}</span>
+                </div>
+              ))}
+            </div>
+            {/* シームレス切り替え用の複製 */}
+            <div className="flex gap-3 md:gap-4 px-1.5 md:px-2">
+              {[
+                "プロサッカー", "鉄道・交通機関", "音楽ライブイベント", 
+                "メタバース", "広告キャンペーン", "効果測定", 
+                "タイムセール", "ペンライト", "立体シール"
+              ].map((tag, i) => (
+                <div key={`r2-2-${i}`} className="group flex items-center justify-center px-5 py-2.5 rounded-full border border-border bg-surface shadow-sm hover:border-accent hover:shadow-[0_0_15px_rgba(255,59,124,0.2)] transition-all duration-300 cursor-default hover:-translate-y-0.5 whitespace-nowrap shrink-0">
+                   <span className="text-accent/60 group-hover:text-accent group-hover:drop-shadow-[0_0_8px_var(--color-accent)] transition-all duration-300 mr-1 font-bold">#</span>
+                   <span className="font-bold tracking-widest text-sm text-muted group-hover:text-text transition-colors">{tag}</span>
+                </div>
+              ))}
+            </div>
           </div>
-
-          <div className="flex items-center gap-2 text-white/80 hover:text-white transition-colors">
-             <div className="w-8 h-8 rotate-45 bg-white/20 flex items-center justify-center">
-               <span className="font-bold text-sm -rotate-45">G</span>
-             </div>
-             <span className="font-bold tracking-wider text-sm">GlobalStage</span>
-          </div>
-
-          <div className="flex items-center gap-2 text-white/80 hover:text-white transition-colors">
-             <div className="w-8 h-8 rounded-lg border-2 border-white/20 flex items-center justify-center">
-               <span className="font-bold text-sm">D</span>
-             </div>
-             <span className="font-bold tracking-wider text-sm">DomeTours</span>
-          </div>
-
-          <div className="flex items-center gap-2 text-white/80 hover:text-white transition-colors">
-             <div className="w-8 h-8 flex items-center justify-center">
-               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-6 h-6">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path>
-                  <polyline points="13 2 13 9 20 9"></polyline>
-               </svg>
-             </div>
-             <span className="font-bold tracking-wider text-sm">EventCorp</span>
-          </div>
-
         </div>
       </div>
     </section>

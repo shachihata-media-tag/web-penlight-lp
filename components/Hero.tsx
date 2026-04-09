@@ -29,6 +29,8 @@ export function Hero() {
           loop
           muted
           playsInline
+          preload="metadata"
+          poster="/og-image.png"
           className="absolute top-0 left-0 w-full h-full object-cover"
         >
           <source src="/video/webpenlight.mp4" type="video/mp4" />
@@ -157,6 +159,7 @@ export function Hero() {
                       )}
                       style={{ backgroundColor: c.value }}
                       title={c.name}
+                      aria-label={`カラーを${c.name}に変更`}
                     />
                   ))}
                   <button

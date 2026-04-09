@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 export function Footer() {
   return (
@@ -6,48 +7,53 @@ export function Footer() {
       <div className='container-custom'>
         <div className='grid grid-cols-1 md:grid-cols-4 gap-8 mb-12'>
           <div className='col-span-1 md:col-span-2'>
-            <Image src='/shachihata-logo.png' alt='Shachihata' width={120} height={40} className='h-8 w-auto object-contain mb-4 brightness-0' />
+            <Image src='/shachihata-logo.png' alt='シヤチハタ株式会社' width={120} height={40} className='h-8 w-auto object-contain mb-4 brightness-0' />
             <p className='leading-relaxed opacity-80'>
               音響連動スマホペンライト
               <br />
               世界中の会場と配信を、ひとつの光でつなぐ。
             </p>
           </div>
-          <div>
-            <h4 className='text-text font-bold mb-4'>Product</h4>
+          <nav aria-label="プロダクトナビゲーション">
+            <h4 className='text-text font-bold mb-4'>プロダクト</h4>
             <ul className='space-y-2'>
               <li>
-                <a href='#hero' className='hover:text-text transition-colors'>
-                  Top
-                </a>
+                <Link href='#hero' className='hover:text-text transition-colors'>
+                  トップ
+                </Link>
               </li>
               <li>
-                <a href='#features' className='hover:text-text transition-colors'>
-                  Features
-                </a>
+                <Link href='#lineup' className='hover:text-text transition-colors'>
+                  製品ラインナップ
+                </Link>
               </li>
               <li>
-                <a href='#pricing' className='hover:text-text transition-colors'>
-                  Pricing
-                </a>
+                <Link href='#pricing' className='hover:text-text transition-colors'>
+                  費用感
+                </Link>
+              </li>
+              <li>
+                <Link href='#demos' className='hover:text-text transition-colors'>
+                  デモ体験
+                </Link>
               </li>
             </ul>
-          </div>
-          <div>
-            <h4 className='text-text font-bold mb-4'>Company</h4>
+          </nav>
+          <nav aria-label="企業情報ナビゲーション">
+            <h4 className='text-text font-bold mb-4'>会社情報</h4>
             <ul className='space-y-2'>
               <li>
                 <a href='https://www.shachihata.co.jp/' target='_blank' rel='noopener noreferrer' className='hover:text-text transition-colors'>
-                  Corporate Site
+                  コーポレートサイト
                 </a>
               </li>
               <li>
-                <a href='#' className='hover:text-text transition-colors'>
-                  Privacy Policy
+                <a href='https://www.shachihata.co.jp/privacy/' target='_blank' rel='noopener noreferrer' className='hover:text-text transition-colors'>
+                  プライバシーポリシー
                 </a>
               </li>
             </ul>
-          </div>
+          </nav>
         </div>
 
         {/* Company Overview for AI Search / Trust */}
@@ -78,7 +84,6 @@ export function Footer() {
 
         <div className='flex flex-col md:flex-row justify-between items-center pt-8 border-t border-border/50'>
           <p>&copy; {new Date().getFullYear()} Shachihata Inc. All rights reserved.</p>
-          <p className='text-xs mt-2 md:mt-0 opacity-50'>Design for intended functionality demo only.</p>
         </div>
       </div>
     </footer>

@@ -35,7 +35,11 @@ export default function Home() {
       
       <Presets />
 
-      <section className="py-24 bg-transparent border-t border-white/5">
+      <section
+        id="case-video"
+        className="py-24 bg-transparent border-t border-white/5"
+        aria-label="導入イメージ動画"
+      >
         <div className="container-custom">
            <h2 className="text-3xl font-bold mb-12 text-center">実際の導入イメージ</h2>
            <VideoCard />

@@ -13,7 +13,7 @@ export function Header() {
         </div>
 
         {/* Desktop Nav */}
-        <nav className='hidden md:flex items-center gap-6 text-sm font-medium'>
+        <nav aria-label="メインナビゲーション" className='hidden md:flex items-center gap-6 text-sm font-medium'>
           <Link href='#features' className='text-muted hover:text-text transition-colors'>
             特徴
           </Link>

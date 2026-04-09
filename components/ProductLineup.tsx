@@ -131,20 +131,24 @@ export function ProductLineup() {
                 <div className="relative w-full h-full flex items-center justify-center">
                   <div className="absolute inset-0 flex items-center justify-center w-[75%] h-auto mx-auto animate-sticker-1 drop-shadow-md">
                     <Image
-                      src="/images/スマホペンライトデコシールPKイメージ_野球チームバラエティ.png"
-                      alt="スマホペンライトシール バラエティ"
+                      src="/images/スマホペンライトデコシールPKイメージ_野球チームバラエティ.webp"
+                      alt="音響連動型スマホライト用デコシール - 野球チームバラエティパック"
                       width={400}
                       height={800}
                       className="w-full h-auto object-contain"
+                      loading="lazy"
+                      sizes="(max-width: 768px) 60vw, 300px"
                     />
                   </div>
                   <div className="absolute inset-0 flex items-center justify-center w-[75%] h-auto mx-auto animate-sticker-2 drop-shadow-md">
                     <Image
-                      src="/images/スマホペンライトデコシールPKイメージ_野球チームマスコット.png"
-                      alt="スマホペンライトシール マスコット"
+                      src="/images/スマホペンライトデコシールPKイメージ_野球チームマスコット.webp"
+                      alt="音響連動型スマホライト用デコシール - 野球チームマスコットパック"
                       width={400}
                       height={800}
                       className="w-full h-auto object-contain"
+                      loading="lazy"
+                      sizes="(max-width: 768px) 60vw, 300px"
                     />
                   </div>
                 </div>

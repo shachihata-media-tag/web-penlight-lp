@@ -11,7 +11,8 @@ export function VideoCard() {
         frameBorder='0'
         allow='autoplay; fullscreen; picture-in-picture'
         allowFullScreen
-        title='実際の導入イメージ'
+        loading='lazy'
+        title='音響連動ソリューション導入イメージ - シヤチハタのスマホペンライト実演動画'
       />
     </div>
   );

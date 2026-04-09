@@ -1,10 +1,15 @@
 "use client";
 
 import { Smartphone, Volume2 } from "lucide-react";
+import Image from "next/image";
 
 export function DemoSection() {
   return (
-    <section className="py-24 bg-transparent border-t border-border/50 relative overflow-hidden">
+    <section
+      id="demos"
+      className="py-24 bg-transparent border-t border-border/50 relative overflow-hidden"
+      aria-label="デモ体験"
+    >
       <div className="container-custom relative z-10">
         <div className="text-center mb-16">
           <span className="text-accent font-bold tracking-wider text-sm uppercase mb-2 block">
@@ -21,10 +26,10 @@ export function DemoSection() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Step 1: QR Code */}
-          <div className="bg-surface border border-border rounded-card p-8 text-center relative group hover:shadow-lg transition-shadow">
+          <article className="bg-surface border border-border rounded-card p-8 text-center relative group hover:shadow-lg transition-shadow">
             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-accent/50 to-transparent opacity-50" />
             
-            <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-surface2 border border-border text-text mb-6">
+            <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-surface2 border border-border text-text mb-6" aria-hidden="true">
               <Smartphone size={24} />
             </div>
 
@@ -35,21 +40,23 @@ export function DemoSection() {
             </p>
 
             <div className="bg-white p-4 rounded-xl inline-block mx-auto mb-4">
-              {/* Placeholder QR Code - Replace with actual URL */}
-              <img 
-                src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://d2gj7fm9gwjygp.cloudfront.net" 
-                alt="Demo QR Code" 
-                className="w-48 h-48 sm:w-56 sm:h-56 object-contain"
+              <Image 
+                src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://d2gj7fm9gwjygp.cloudfront.net"
+                alt="デモ体験用QRコード - スマートフォンで読み取ってください" 
+                width={224}
+                height={224}
+                className="object-contain"
+                unoptimized
               />
             </div>
             <p className="text-xs text-muted/50">※画面はイメージです</p>
-          </div>
+          </article>
 
           {/* Step 2: Vimeo */}
-          <div className="bg-surface border border-border rounded-card p-8 text-center relative group hover:shadow-lg transition-shadow">
+          <article className="bg-surface border border-border rounded-card p-8 text-center relative group hover:shadow-lg transition-shadow">
             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent to-accent/50 opacity-50" />
 
-            <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-surface2 border border-border text-text mb-6">
+            <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-surface2 border border-border text-text mb-6" aria-hidden="true">
               <Volume2 size={24} />
             </div>
 
@@ -66,10 +73,11 @@ export function DemoSection() {
                 frameBorder="0" 
                 allow="autoplay; fullscreen; picture-in-picture" 
                 allowFullScreen
-                title="Demo Sound Source"
+                loading="lazy"
+                title="音響連動デモ音源 - ペンライト連動体験用動画"
               ></iframe>
             </div>
-          </div>
+          </article>
         </div>
       </div>
     </section>

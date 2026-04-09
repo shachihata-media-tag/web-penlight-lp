@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Noto_Sans_JP } from "next/font/google"; // Corrected import
+import { Inter, Noto_Sans_JP } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { SITE_METADATA } from "@/lib/constants";
@@ -7,9 +7,6 @@ import { StructuredData } from "@/components/StructuredData";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { DynamicBackground } from "@/components/DynamicBackground";
-
-
-
 
 // Fonts
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
@@ -23,10 +20,13 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_METADATA.url),
   title: {
     default: SITE_METADATA.title,
-    template: `%s | ${SITE_METADATA.title}`,
+    template: `%s | ${SITE_METADATA.siteName}`,
   },
   description: SITE_METADATA.description,
   keywords: SITE_METADATA.keywords,
+  authors: [{ name: "Shachihata Inc.", url: "https://www.shachihata.co.jp/" }],
+  creator: "Shachihata Inc.",
+  publisher: "Shachihata Inc.",
   openGraph: {
     type: "website",
     locale: "ja_JP",
@@ -34,11 +34,21 @@ export const metadata: Metadata = {
     title: SITE_METADATA.title,
     description: SITE_METADATA.description,
     siteName: SITE_METADATA.siteName,
+    images: [
+      {
+        url: SITE_METADATA.ogImage,
+        width: 1200,
+        height: 630,
+        alt: "シヤチハタ音響連動ソリューション - スマホペンライトでライブ会場と配信をひとつに",
+        type: "image/png",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: SITE_METADATA.title,
     description: SITE_METADATA.description,
+    images: [SITE_METADATA.ogImage],
   },
   alternates: {
     canonical: SITE_METADATA.url,
@@ -54,6 +64,7 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  category: "technology",
 };
 
 export default function RootLayout({
@@ -63,9 +74,26 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja" className="scroll-smooth" suppressHydrationWarning>
-      <body className={cn(inter.variable, notoSansJP.variable, "font-sans min-h-screen flex flex-col bg-transparent tracking-wide")}>
-        <DynamicBackground />
+      <head>
+        <link rel="dns-prefetch" href="https://player.vimeo.com" />
+        <link rel="dns-prefetch" href="https://api.qrserver.com" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+      </head>
+      <body
+        suppressHydrationWarning
+        className={cn(
+          inter.variable,
+          notoSansJP.variable,
+          "font-sans min-h-screen flex flex-col bg-transparent tracking-wide"
+        )}
+      >
         <StructuredData />
+        <DynamicBackground />
         {children}
         <Analytics />
         <SpeedInsights />

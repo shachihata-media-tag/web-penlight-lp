@@ -26,7 +26,7 @@ export function DemoSection() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Step 1: QR Code */}
-          <article className="bg-surface border border-border rounded-card p-8 text-center relative group hover:shadow-lg transition-shadow">
+          <div className="bg-surface border border-border rounded-card p-8 text-center relative group hover:shadow-lg transition-shadow">
             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-accent/50 to-transparent opacity-50" />
             
             <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-surface2 border border-border text-text mb-6" aria-hidden="true">
@@ -50,10 +50,10 @@ export function DemoSection() {
               />
             </div>
             <p className="text-xs text-muted/50">※画面はイメージです</p>
-          </article>
+          </div>
 
           {/* Step 2: Vimeo */}
-          <article className="bg-surface border border-border rounded-card p-8 text-center relative group hover:shadow-lg transition-shadow">
+          <div className="bg-surface border border-border rounded-card p-8 text-center relative group hover:shadow-lg transition-shadow">
             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent to-accent/50 opacity-50" />
 
             <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-surface2 border border-border text-text mb-6" aria-hidden="true">
@@ -77,7 +77,7 @@ export function DemoSection() {
                 title="音響連動デモ音源 - ペンライト連動体験用動画"
               ></iframe>
             </div>
-          </article>
+          </div>
         </div>
       </div>
     </section>

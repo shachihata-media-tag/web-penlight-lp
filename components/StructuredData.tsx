@@ -4,7 +4,6 @@ export const StructuredData = () => {
   const baseUrl = SITE_METADATA.url;
 
   const websiteData = {
-    "@context": "https://schema.org",
     "@type": "WebSite",
     "@id": `${baseUrl}/#website`,
     name: SITE_METADATA.siteName,
@@ -25,7 +24,6 @@ export const StructuredData = () => {
   };
 
   const organizationData = {
-    "@context": "https://schema.org",
     "@type": "Organization",
     "@id": `${baseUrl}/#organization`,
     name: "Shachihata Inc.",
@@ -67,7 +65,6 @@ export const StructuredData = () => {
   };
 
   const productData = {
-    "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     "@id": `${baseUrl}/#product`,
     name: "音響連動スマホペンライト",
@@ -107,7 +104,6 @@ export const StructuredData = () => {
   };
 
   const faqData = {
-    "@context": "https://schema.org",
     "@type": "FAQPage",
     "@id": `${baseUrl}/#faq`,
     mainEntity: FAQS.map((faq) => ({
@@ -121,7 +117,6 @@ export const StructuredData = () => {
   };
 
   const breadcrumbData = {
-    "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "@id": `${baseUrl}/#breadcrumb`,
     itemListElement: [
@@ -135,7 +130,6 @@ export const StructuredData = () => {
   };
 
   const videoData = {
-    "@context": "https://schema.org",
     "@type": "VideoObject",
     "@id": `${baseUrl}/#demo-video`,
     name: "音響連動スマホペンライト 導入イメージ動画｜ライブ演出デモ",
@@ -143,6 +137,7 @@ export const StructuredData = () => {
       "シヤチハタの音響連動ソリューションの実際の導入イメージをご紹介。会場のスマートフォンが一斉にペンライトとして光り、推し活・ライブ体験を革新します。アクスタや物理ペンライトとの連動も可能。",
     thumbnailUrl: `${baseUrl}/og-image.png`,
     uploadDate: "2024-01-01",
+    duration: "PT2M30S",
     contentUrl: "https://vimeo.com/1148225012",
     embedUrl: "https://player.vimeo.com/video/1148225012",
     publisher: {
@@ -152,7 +147,6 @@ export const StructuredData = () => {
   };
 
   const howToData = {
-    "@context": "https://schema.org",
     "@type": "HowTo",
     "@id": `${baseUrl}/#howto`,
     name: "スマホをペンライトにする方法｜アプリ不要・QRコードで即参加",
@@ -182,13 +176,13 @@ export const StructuredData = () => {
   };
 
   const articlePageData = {
-    "@context": "https://schema.org",
     "@type": ["WebPage", "ItemPage", "Article"],
     "@id": `${baseUrl}/#article`,
     url: baseUrl,
     name: "スマホペンライト（音響連動ソリューション）とは｜推し活・ライブ演出の新定番",
     headline: "会場と配信をひとつにする、音響連動スマホペンライト",
     description: "シヤチハタ株式会社が提供する、アプリ不要のスマホ音響連動ペンライトシステム。推し活・ライブ・コンサートの演出を革新する次世代ソリューションの公式機能・導入メリット解説ページです。",
+    image: `${baseUrl}/og-image.png`,
     datePublished: "2024-01-01T00:00:00+09:00",
     dateModified: new Date().toISOString(),
     about: [
@@ -206,40 +200,25 @@ export const StructuredData = () => {
     }
   };
 
+  // Consolidate all structured data into a single @graph (Google recommended)
+  const graphData = {
+    "@context": "https://schema.org",
+    "@graph": [
+      websiteData,
+      organizationData,
+      articlePageData,
+      productData,
+      faqData,
+      breadcrumbData,
+      videoData,
+      howToData,
+    ],
+  };
+
   return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteData) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articlePageData) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationData) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(productData) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbData) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(videoData) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToData) }}
-      />
-    </>
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(graphData) }}
+    />
   );
 };

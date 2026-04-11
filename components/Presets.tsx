@@ -45,7 +45,7 @@ export function Presets() {
   }, [activePreset]);
 
   return (
-    <section id='demos' className='py-24 bg-transparent relative'>
+    <section id='preset-demos' className='py-24 bg-transparent relative' aria-label='演出パターンプリセット'>
       <div className='container-custom grid grid-cols-1 lg:grid-cols-2 gap-16 items-center'>
         <div>
           <span className='text-accent text-sm font-bold tracking-widest uppercase mb-2 block'>Presets</span>

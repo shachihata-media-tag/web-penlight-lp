@@ -9,7 +9,7 @@ export function Specs() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Colors */}
           <div>
-            <h3 className="text-sm font-bold text-muted mb-6 uppercase tracking-wider">Colors</h3>
+            <h3 className="text-sm font-bold text-muted mb-6 tracking-wider">対応カラー（14色）</h3>
             <div className="grid grid-cols-5 gap-3">
               {PENLIGHT_COLORS.map((c) => (
                 <div key={c.name} className="flex flex-col items-center gap-2">
@@ -32,7 +32,7 @@ export function Specs() {
 
           {/* Technical Specs */}
           <div>
-            <h3 className="text-sm font-bold text-muted mb-6 uppercase tracking-wider">System Requirements</h3>
+            <h3 className="text-sm font-bold text-muted mb-6 tracking-wider">動作環境・技術仕様</h3>
             <div className="space-y-4 text-sm">
                 <div className="flex justify-between border-b border-border/50 pb-2">
                     <span className="text-muted">対応OS</span>

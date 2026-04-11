@@ -40,7 +40,7 @@ export function FAQ() {
                 aria-labelledby={`faq-question-${i}`}
                 className={cn(
                   "overflow-hidden transition-all duration-300 ease-in-out",
-                  openIndex === i ? "max-h-48 opacity-100" : "max-h-0 opacity-0"
+                  openIndex === i ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
                 )}
               >
                 <div className="p-6 pt-0 text-muted leading-relaxed text-sm">

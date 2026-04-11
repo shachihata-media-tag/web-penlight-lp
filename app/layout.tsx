@@ -52,6 +52,9 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: SITE_METADATA.url,
+    languages: {
+      'ja': SITE_METADATA.url,
+    },
   },
   robots: {
     index: true,

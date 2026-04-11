@@ -73,7 +73,7 @@ export const StructuredData = () => {
     name: "音響連動ソリューション（スマホペンライト）",
     alternateName: "Sound-Synced WEB Penlight",
     description:
-      "会場と配信を\"ひとつ\"にする、音響連動スマホペンライト。専用アプリインストール不要、QRコードで即参加できるイベント演出ソリューション。音響透かし技術「Another Track®」を採用し、5万人規模のドームでも安定動作。",
+      "会場と配信を\"ひとつ\"にする、音響連動スマホペンライト。専用アプリインストール不要、QRコードで即参加できるイベントと「推し活」の演出ソリューション。音響透かし技術「Another Track®」を採用し、5万人規模のドームでも安定動作。スマホ画面だけでなく物理ペンライトやアクスタとの連携も可能。",
     image: `${baseUrl}/og-image.png`,
     applicationCategory: "MultimediaApplication",
     operatingSystem: "iOS 14+, Android 10+",

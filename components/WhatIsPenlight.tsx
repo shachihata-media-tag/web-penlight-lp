@@ -11,7 +11,7 @@ export function WhatIsPenlight() {
               Webペンライト（音響連動ソリューション）とは？
             </h2>
             <p className="text-lg md:text-xl text-white/80 leading-relaxed max-w-3xl mx-auto text-left md:text-center">
-              <strong>Webペンライト（音響連動ソリューション）</strong>とは、専用アプリをインストールすることなく、ブラウザでQRコードを読み込むだけで、観客のスマートフォン画面やフラッシュライトを会場の音楽と同期させる<strong>次世代のイベント演出システム</strong>です。
+              <strong>Webペンライト（音響連動ソリューション）</strong>とは、専用アプリをインストールすることなく、ブラウザでQRコードを読み込むだけで、観客のスマートフォン画面やフラッシュライト、さらには<strong>ペンライトやアクスタ（アクリルスタンド）などの推し活グッズ</strong>を会場の音楽と同期させる<strong>次世代のイベント演出システム</strong>です。
             </p>
           </header>
 

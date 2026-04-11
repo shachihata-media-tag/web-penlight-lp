@@ -57,7 +57,7 @@ export function Hero() {
           </h1>
 
           <p className="text-lg text-white/70 max-w-xl leading-relaxed">
-            スマホ、ペンライト、アクリルスタンドを<br className="md:hidden" />音で同期。<br className="hidden md:block" />
+            スマホ、ペンライト、アクスタなどの<br className="md:hidden" />推し活グッズを音で同期。<br className="hidden md:block" />
             専用アプリ不要で、会場の歓声も<br className="md:hidden" />配信越しの熱狂も、<br className="hidden md:block" />
             音に込めた信号で一斉にシンクロします。
           </p>

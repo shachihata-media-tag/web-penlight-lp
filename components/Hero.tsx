@@ -48,17 +48,17 @@ export function Hero() {
           </div>
           
           <h1 className="text-4xl md:text-5xl xl:text-6xl font-bold leading-tight text-white relative">
-            <span className="sr-only">会場と配信をひとつにする、音響連動ソリューション</span>
+            <span className="sr-only">スマホペンライト｜推し活・ライブ演出を音響連動で会場と配信をひとつにするソリューション</span>
             <span aria-hidden="true" className="block">
               会場と配信を<br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-[#FF8C00]">“ひとつ”にする、</span><br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-[#FF8C00]">{"\u201C"}ひとつ{"\u201D"}にする、</span><br />
               <span className="inline-block whitespace-nowrap">音響連動ソリューション</span>
             </span>
           </h1>
 
           <p className="text-lg text-white/70 max-w-xl leading-relaxed">
-            スマホ、ペンライト、アクスタなどの<br className="md:hidden" />推し活グッズを音で同期。<br className="hidden md:block" />
-            専用アプリ不要で、会場の歓声も<br className="md:hidden" />配信越しの熱狂も、<br className="hidden md:block" />
+            スマホがペンライトに。アクスタも光る。<br className="md:hidden" />推し活グッズが音で同期する新体験。<br className="hidden md:block" />
+            専用アプリ不要で、ライブ会場も<br className="md:hidden" />自宅の配信視聴も、<br className="hidden md:block" />
             音に込めた信号で一斉にシンクロします。
           </p>
 

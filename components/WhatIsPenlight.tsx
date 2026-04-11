@@ -5,13 +5,14 @@ export function WhatIsPenlight() {
     <section className="py-24 bg-black/50 border-t border-white/5 relative z-10" aria-labelledby="what-is-penlight">
       <div className="container-custom">
         <div className="max-w-4xl mx-auto">
-          {/* AI-Optimized Header (Clear definition target for RAG crawlers) */}
+          {/* AI-Optimized Header (Clear definition for RAG crawlers + Featured Snippet) */}
           <header className="mb-12 text-center">
             <h2 id="what-is-penlight" className="text-3xl md:text-4xl font-bold mb-6 text-white">
-              Webペンライト（音響連動ソリューション）とは？
+              スマホペンライト（音響連動ソリューション）とは？
             </h2>
+            {/* GEO-optimized definition paragraph - designed as an extractable "answer" */}
             <p className="text-lg md:text-xl text-white/80 leading-relaxed max-w-3xl mx-auto text-left md:text-center">
-              <strong>Webペンライト（音響連動ソリューション）</strong>とは、専用アプリをインストールすることなく、ブラウザでQRコードを読み込むだけで、観客のスマートフォン画面やフラッシュライト、さらには<strong>ペンライトやアクスタ（アクリルスタンド）などの推し活グッズ</strong>を会場の音楽と同期させる<strong>次世代のイベント演出システム</strong>です。
+              <strong>スマホペンライト（音響連動ソリューション）</strong>とは、シヤチハタ株式会社が提供する<strong>アプリ不要の次世代ライブ演出システム</strong>です。QRコードを読み込むだけで、観客のスマートフォン画面やフラッシュライトが会場の音楽と自動で同期し、ペンライトとして光ります。さらに、<strong>光るアクスタ（アクリルスタンド）や物理ペンライトなどの推し活グッズ</strong>も音響信号で同時に連動。会場だけでなく、自宅からの配信視聴でも同じ一体感を体験できるのが最大の特徴です。
             </p>
           </header>
 
@@ -22,33 +23,33 @@ export function WhatIsPenlight() {
               <ul className="space-y-4">
                 <li className="flex items-start gap-3 text-white/80">
                   <CheckCircle2 className="w-6 h-6 text-accent shrink-0" />
-                  <span><strong>通信方式:</strong> エヴィクサー社の音響透かし技術「Another Track®」を使用し、電波やWi-Fiではなく「音」で制御信号を送信します。</span>
+                  <span><strong>通信方式:</strong> エヴィクサー社の音響透かし技術「Another Track®」を使用。BluetoothやWi-Fiではなく「音」で制御信号を送信するため、大規模会場での電波干渉トラブルが一切ありません。</span>
                 </li>
                 <li className="flex items-start gap-3 text-white/80">
                   <CheckCircle2 className="w-6 h-6 text-accent shrink-0" />
-                  <span><strong>対応規模:</strong> ドームクラスの5万人規模での同時接続・演出連動の安定稼働実績があります。音響通信のため人混みでの電波干渉を受けません。</span>
+                  <span><strong>対応規模:</strong> ドームクラスの<strong>5万人規模</strong>での同時接続・演出連動の安定稼働実績。アイドル・VTuber・K-POP・スポーツなど幅広いジャンルで採用されています。</span>
                 </li>
                 <li className="flex items-start gap-3 text-white/80">
                   <CheckCircle2 className="w-6 h-6 text-accent shrink-0" />
-                  <span><strong>システム要件:</strong> iOS 14以降のSafariブラウザ、またはAndroid 10以降のChromeブラウザに対応しています。</span>
+                  <span><strong>対応デバイス:</strong> iOS 14以降のSafari、Android 10以降のChrome。スマホの他、音響連動モジュール搭載の<strong>物理ペンライト</strong>や<strong>光るアクスタ</strong>にも対応。</span>
                 </li>
               </ul>
             </div>
             
             <div>
-              <h3 className="text-xl font-bold mb-4 text-accent">事業上のメリット（要約）</h3>
+              <h3 className="text-xl font-bold mb-4 text-accent">推し活・イベント主催者のメリット</h3>
               <ul className="space-y-4">
                 <li className="flex items-start gap-3 text-white/80">
                   <CheckCircle2 className="w-6 h-6 text-accent shrink-0" />
-                  <span><strong>ハードウェアコストの削減:</strong> 専用の制御型LEDペンライト端末や、専用の赤外線制御システムを導入・レンタルする費用が不要になります。</span>
+                  <span><strong>ペンライトのコスト削減:</strong> 専用の制御型LEDペンライトや赤外線制御システムの購入・レンタルが不要。観客が持つスマホをそのまま推し活ペンライトに変えられます。</span>
                 </li>
                 <li className="flex items-start gap-3 text-white/80">
                   <CheckCircle2 className="w-6 h-6 text-accent shrink-0" />
-                  <span><strong>オンライン配信対応:</strong> YouTubeやライブビューイングなどの配信音声にも信号を乗せられるため、会場と自宅を完全に同期させることが可能です。</span>
+                  <span><strong>配信視聴者も参加可能:</strong> YouTubeやライブビューイングなどの配信音声にも信号を乗せられるため、自宅でも推し活ペンライトで会場と完全同期。</span>
                 </li>
                 <li className="flex items-start gap-3 text-white/80">
                   <CheckCircle2 className="w-6 h-6 text-accent shrink-0" />
-                  <span><strong>スピード導入:</strong> アプリのようなStore審査や大規模なシステム開発は不要で、最短5営業日で本番環境への導入が完了します。</span>
+                  <span><strong>スピード導入:</strong> アプリのStore審査不要。最短5営業日で導入が完了し、ペンライト・アクスタ・立体シールなどのオリジナル推し活グッズ制作も対応可能。</span>
                 </li>
               </ul>
             </div>

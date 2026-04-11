@@ -9,9 +9,9 @@ export function Footer() {
           <div className='col-span-1 md:col-span-2'>
             <Image src='/shachihata-logo.png' alt='シヤチハタ株式会社' width={120} height={40} className='h-8 w-auto object-contain mb-4 brightness-0' />
             <p className='leading-relaxed opacity-80'>
-              音響連動スマホペンライト
+              スマホペンライト・光るアクスタ・推し活グッズの音響連動ソリューション
               <br />
-              世界中の会場と配信を、ひとつの光でつなぐ。
+              会場と配信を、ひとつの光でつなぐ。
             </p>
           </div>
           <nav aria-label="プロダクトナビゲーション">

@@ -44,7 +44,7 @@ export default function Home() {
         aria-label="導入イメージ動画"
       >
         <div className="container-custom">
-           <h2 className="text-3xl font-bold mb-12 text-center">実際の導入イメージ</h2>
+           <h2 className="text-3xl font-bold mb-12 text-center">ペンライト演出の導入事例イメージ</h2>
            <VideoCard />
         </div>
       </section>

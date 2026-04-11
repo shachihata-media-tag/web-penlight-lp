@@ -3,40 +3,40 @@ import { AlertTriangle, Clock, Radio, Users } from "lucide-react";
 const PROBLEMS = [
   {
     icon: AlertTriangle,
-    problem: "在庫リスク",
+    problem: "ペンライトの在庫リスク",
     text: "イベントごとのペンライトやアクスタなど推し活グッズの制作は、発注数予測が難しく在庫リスクが常につきまとう。",
     solution: "在庫ゼロ",
-    solutionText: "スマホを使用するため、物理デバイスの製造・在庫管理が一切不要。",
+    solutionText: "観客のスマホをそのままペンライト化。物理デバイスの製造・在庫管理が一切不要。",
   },
   {
     icon: Clock,
     problem: "配布・回収の手間",
-    text: "入場時の配布や、退場時の回収・消毒作業に膨大なスタッフ工数がかかる。",
+    text: "ペンライト入場時の配布や、退場時の回収・消毒作業に膨大なスタッフ工数がかかる。",
     solution: "配布なし",
-    solutionText: "QRコードを掲示するだけ。入場・退場のオペレーションを阻害しません。",
+    solutionText: "QRコードを掲示するだけ。スマホがペンライトになるため、入退場オペレーションを阻害しません。",
   },
   {
     icon: Radio,
-    problem: "電波干渉トラブル",
-    text: "Bluetooth制御のライトは、Wi-Fiや他の無線機器との干渉で制御不能になるリスクがある。",
+    problem: "Bluetooth干渉トラブル",
+    text: "Bluetooth制御のペンライトは、数千人を超える大規模会場でWi-Fiや他の無線機器との干渉で制御不能になるリスクがある。",
     solution: "音響通信",
-    solutionText: "「音」で制御するため、電波混雑の影響を受けません。数万人のドームでも安定動作。",
+    solutionText: "音響透かし技術「Another Track®」で「音」を使って制御。電波混雑の影響を受けず、5万人のドームでも全員のペンライトを安定同期。",
   },
   {
     icon: Users,
-    problem: "配信参加者の疎外感",
-    text: "会場の盛り上がりに対し、配信視聴者は「ただ見ているだけ」になりがち。",
+    problem: "配信視聴者の疎外感",
+    text: "会場のペンライト演出に対し、自宅で配信を見ているファンは「ただ見ているだけ」の推し活になりがち。",
     solution: "全同時連動",
-    solutionText: "配信音声にも信号を乗せることで、地球の裏側でも同じタイミングで光ります。",
+    solutionText: "配信音声にも信号を乗せることで、自宅のスマホペンライトも会場と同じタイミングで光ります。推し活に距離は関係ありません。",
   },
 ];
 
 export function ProblemSolution() {
   return (
-    <section className="py-24 bg-transparent border-t border-border/50">
+    <section className="py-24 bg-transparent border-t border-border/50" aria-labelledby="problem-solution-heading">
       <div className="container-custom">
-        <h2 className="text-3xl font-bold text-center mb-16 text-text">
-          従来の演出デバイスが抱える<br className="md:hidden"/>課題を解決
+        <h2 id="problem-solution-heading" className="text-3xl font-bold text-center mb-16 text-text">
+          従来のペンライト演出が抱える<br className="md:hidden"/>課題を解決
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -69,7 +69,7 @@ export function ProblemSolution() {
           <div className="absolute top-6 left-6 text-6xl text-accent/20 font-serif leading-none" aria-hidden="true">&quot;</div>
           <blockquote className="relative z-10">
             <p className="text-lg md:text-xl text-white/90 leading-relaxed font-medium md:text-left mb-6">
-              これまでのイベント演出において、高額な専用ハードウェアの導入コストや、スタジアム特有の電波通信トラブルは主催者最大のハードルでした。私たちは音響通信技術「Another Track®」を活用し、観客が必ず持っているスマートフォンをそのまま演出デバイス化することで、インフラ規模を問わず、安定して数万人を同時同期させる画期的なソリューションを確立しました。
+              従来のイベント演出では、高額な専用ペンライトの導入コストや、大規模会場でのBluetooth干渉トラブルが主催者最大のハードルでした。私たちは音響透かし技術「Another Track®」を活用し、観客のスマートフォンをそのままペンライト化することで、5万人規模のドームでも安定して全員を同時同期させるソリューションを確立しました。さらに、推し活グッズとしての光るアクスタや物理ペンライトとの連携により、ファンの体験価値を最大化しています。
             </p>
             <footer className="flex items-center justify-end gap-4">
               <div className="text-right">

@@ -12,7 +12,7 @@ export function FAQ() {
   return (
     <section id="faq" className="py-24 bg-transparent" aria-label="よくあるご質問">
       <div className="container-custom max-w-3xl">
-        <h2 className="text-3xl font-bold mb-12 text-center text-text">よくあるご質問</h2>
+        <h2 className="text-3xl font-bold mb-12 text-center text-text">スマホペンライト・推し活グッズ よくあるご質問</h2>
         
         <div className="space-y-4" role="list">
           {FAQS.map((item, i) => (

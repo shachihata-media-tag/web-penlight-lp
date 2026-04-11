@@ -16,11 +16,11 @@ export function DemoSection() {
             DEMO EXPERIENCE
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            実際の連動を体験
+            スマホペンライトを実際に体験
           </h2>
           <p className="text-muted max-w-2xl mx-auto">
-            お手持ちのスマートフォンで、ペンライトの動作を実際に体験できます。<br className="hidden md:block"/>
-            QRコードを読み取り、下記の動画を再生してください。
+            お手持ちのスマートフォンで、ペンライトの音響連動を実際に体験できます。<br className="hidden md:block"/>
+            QRコードを読み取り、下記の動画を再生するだけでスマホがペンライトに。
           </p>
         </div>
 

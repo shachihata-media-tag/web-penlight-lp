@@ -70,10 +70,10 @@ export const StructuredData = () => {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     "@id": `${baseUrl}/#product`,
-    name: "音響連動ソリューション（スマホペンライト）",
-    alternateName: "Sound-Synced WEB Penlight",
+    name: "音響連動スマホペンライト",
+    alternateName: ["Webペンライト", "Sound-Synced WEB Penlight", "音響連動ソリューション"],
     description:
-      "会場と配信を\"ひとつ\"にする、音響連動スマホペンライト。専用アプリインストール不要、QRコードで即参加できるイベントと「推し活」の演出ソリューション。音響透かし技術「Another Track®」を採用し、5万人規模のドームでも安定動作。スマホ画面だけでなく物理ペンライトやアクスタとの連携も可能。",
+      "会場と配信を\"ひとつ\"にする、音響連動スマホペンライト。専用アプリ不要、QRコードで即参加できるライブ・コンサート・推し活の演出ソリューション。音響透かし技術「Another Track®」を採用し、5万人規模のドームでも安定動作。スマホ画面だけでなく物理ペンライトやアクスタ（光るアクリルスタンド）との連携も可能。",
     image: `${baseUrl}/og-image.png`,
     applicationCategory: "MultimediaApplication",
     operatingSystem: "iOS 14+, Android 10+",
@@ -84,14 +84,26 @@ export const StructuredData = () => {
     manufacturer: {
       "@id": `${baseUrl}/#organization`,
     },
+    audience: {
+      "@type": "Audience",
+      audienceType: "イベント主催者、コンサートプロモーター、推し活ファン、ライブ配信者",
+    },
+    keywords: "ペンライト,スマホペンライト,推し活,アクスタ,ライブ演出,コンサート演出,音響連動,配信連動",
     featureList: [
       "専用アプリ不要 - QRコードで即参加",
-      "会場・配信同時連動",
+      "会場・配信同時連動 - 自宅からも推し活参加",
       "音響透かし通信でBluetooth干渉なし",
-      "5万人同時アクセス実績",
-      "14色のカラーバリエーション",
+      "5万人同時アクセス実績（ドーム規模）",
+      "14色の推しカラー対応",
+      "物理ペンライト・アクスタ連動対応",
       "最短5営業日で導入可能",
     ],
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "JPY",
+      description: "観客（ファン）側の利用は完全無料。主催者様向け導入費用は別途お問い合わせください。",
+    },
   };
 
   const faqData = {
@@ -126,9 +138,9 @@ export const StructuredData = () => {
     "@context": "https://schema.org",
     "@type": "VideoObject",
     "@id": `${baseUrl}/#demo-video`,
-    name: "音響連動ソリューション 導入イメージ動画",
+    name: "音響連動スマホペンライト 導入イメージ動画｜ライブ演出デモ",
     description:
-      "シヤチハタの音響連動ソリューションの実際の導入イメージをご紹介。会場のスマートフォンが一斉にペンライトとして光り、ライブ体験を革新します。",
+      "シヤチハタの音響連動ソリューションの実際の導入イメージをご紹介。会場のスマートフォンが一斉にペンライトとして光り、推し活・ライブ体験を革新します。アクスタや物理ペンライトとの連動も可能。",
     thumbnailUrl: `${baseUrl}/og-image.png`,
     uploadDate: "2024-01-01",
     contentUrl: "https://vimeo.com/1148225012",
@@ -143,28 +155,28 @@ export const StructuredData = () => {
     "@context": "https://schema.org",
     "@type": "HowTo",
     "@id": `${baseUrl}/#howto`,
-    name: "音響連動スマホペンライトの使い方",
+    name: "スマホをペンライトにする方法｜アプリ不要・QRコードで即参加",
     description:
-      "数タップで誰でもスマホペンライトに参加できます。専用アプリのインストールは不要です。",
+      "スマホをペンライトとして使う方法を解説。専用アプリのインストールは不要で、QRコードを読み取りマイクを許可するだけの簡単3ステップ。ライブ会場でも自宅の配信視聴でも、推し活がもっと楽しくなります。",
     totalTime: "PT30S",
     step: [
       {
         "@type": "HowToStep",
         position: 1,
         name: "QRコードをスキャン",
-        text: "会場に掲示されたQRコードをスマートフォンのカメラで読み取り、専用ページにアクセスします。",
+        text: "会場に掲示されたQRコードをスマートフォンのカメラで読み取り、専用ページにアクセスします。アプリのダウンロードは不要です。",
       },
       {
         "@type": "HowToStep",
         position: 2,
         name: "マイクのアクセスを許可",
-        text: "ブラウザがマイクへのアクセス許可を求めたら「許可」をタップします。音響信号の検出に使用します。",
+        text: "ブラウザがマイクへのアクセス許可を求めたら「許可」をタップします。音響信号の検出に使用します（録音はしません）。",
       },
       {
         "@type": "HowToStep",
         position: 3,
         name: "音楽に合わせて自動で光る",
-        text: "楽曲に埋め込まれた音響信号を検出し、スマートフォンの画面やフラッシュライトが自動で演出に連動します。",
+        text: "楽曲に埋め込まれた音響信号を検出し、スマートフォンの画面やフラッシュライトが推しカラーで自動的に演出に連動します。ペンライトやアクスタも同時に光ります。",
       },
     ],
   };
@@ -174,11 +186,18 @@ export const StructuredData = () => {
     "@type": ["WebPage", "ItemPage", "Article"],
     "@id": `${baseUrl}/#article`,
     url: baseUrl,
-    name: "Webペンライト（音響連動ソリューション）とは",
-    headline: "会場と配信をひとつにする、音響連動ソリューション",
-    description: "シヤチハタ株式会社が提供する、アプリ不要のスマホ音響連動ペンライトシステムの公式機能・導入メリット解説ページです。",
+    name: "スマホペンライト（音響連動ソリューション）とは｜推し活・ライブ演出の新定番",
+    headline: "会場と配信をひとつにする、音響連動スマホペンライト",
+    description: "シヤチハタ株式会社が提供する、アプリ不要のスマホ音響連動ペンライトシステム。推し活・ライブ・コンサートの演出を革新する次世代ソリューションの公式機能・導入メリット解説ページです。",
     datePublished: "2024-01-01T00:00:00+09:00",
-    dateModified: new Date().toISOString(), // AI engines love fresh content
+    dateModified: new Date().toISOString(),
+    about: [
+      { "@type": "Thing", name: "ペンライト" },
+      { "@type": "Thing", name: "推し活" },
+      { "@type": "Thing", name: "ライブ演出" },
+      { "@type": "Thing", name: "音響透かし技術" },
+      { "@type": "Thing", name: "アクリルスタンド" },
+    ],
     publisher: {
       "@id": `${baseUrl}/#organization`
     },

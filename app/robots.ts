@@ -45,6 +45,21 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
         disallow: ["/thanks", "/api/", "/goods"],
       },
+      {
+        userAgent: "ClaudeBot",
+        allow: "/",
+        disallow: ["/thanks", "/api/", "/goods"],
+      },
+      {
+        userAgent: "Applebot-Extended",
+        allow: "/",
+        disallow: ["/thanks", "/api/"],
+      },
+      {
+        userAgent: "cohere-ai",
+        allow: "/",
+        disallow: ["/thanks", "/api/", "/goods"],
+      },
     ],
     sitemap: `${baseUrl}/sitemap.xml`,
   };

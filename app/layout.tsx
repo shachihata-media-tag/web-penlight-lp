@@ -83,6 +83,10 @@ export default function RootLayout({
           href="https://fonts.gstatic.com"
           crossOrigin="anonymous"
         />
+        {/* AI Engine Discovery - llms.txt standard */}
+        <link rel="author" href="/llms.txt" />
+        <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM-readable site info" />
+        <link rel="alternate" type="text/plain" href="/llms-full.txt" title="LLM-readable full guide" />
       </head>
       <body
         suppressHydrationWarning

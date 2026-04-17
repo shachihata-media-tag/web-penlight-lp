@@ -41,7 +41,7 @@ export function WhatIsPenlight() {
               <ul className="space-y-4">
                 <li className="flex items-start gap-3 text-text/80">
                   <CheckCircle2 className="w-6 h-6 text-accent shrink-0" />
-                  <span><strong>ペンライトのコスト削減:</strong> 専用の制御型LEDペンライトや赤外線制御システムの購入・レンタルが不要。観客が持つスマホをそのまま推し活ペンライトに変えられます。</span>
+                  <span><strong>専門の音響スペシャリスト不要:</strong> 大規模なシステム構築や専門知識は必要ありません。音源に信号を埋め込むだけで利用できるため、特別な設備なしで簡単に導入できます。</span>
                 </li>
                 <li className="flex items-start gap-3 text-text/80">
                   <CheckCircle2 className="w-6 h-6 text-accent shrink-0" />

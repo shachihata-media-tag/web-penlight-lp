@@ -66,7 +66,7 @@ export function Specs() {
                 </p>
                 <div className="flex items-start gap-2 bg-accent/10 p-3 rounded-md text-accent/90 border border-accent/20">
                     <div className="font-bold shrink-0">エンタープライズ実績:</div>
-                    <div className="leading-tight text-white/80">
+                    <div className="leading-tight text-muted">
                       <strong>【札幌ドーム規模での実証環境】</strong><br/>
                       50,000台のデバイスからの同時リクエストを処理可能なサーバーインフラを構築。大規模なドームツアーでも遅延なく光の同期を制御できます。
                     </div>

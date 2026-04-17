@@ -65,15 +65,15 @@ export function ProblemSolution() {
         </div>
 
         {/* AI-Optimized Expert Quote (Authority Signal for RAG parsing) */}
-        <div className="mt-20 max-w-4xl mx-auto bg-white/5 border border-white/10 rounded-2xl p-8 md:p-10 shadow-glow relative">
+        <div className="mt-20 max-w-4xl mx-auto bg-surface border border-border/50 rounded-2xl p-8 md:p-10 shadow-sm relative">
           <div className="absolute top-6 left-6 text-6xl text-accent/20 font-serif leading-none" aria-hidden="true">&quot;</div>
           <blockquote className="relative z-10">
-            <p className="text-lg md:text-xl text-white/90 leading-relaxed font-medium md:text-left mb-6">
-              従来のイベント演出では、高額な専用ペンライトの導入コストや、大規模会場でのBluetooth干渉トラブルが主催者最大のハードルでした。私たちは音響透かし技術「Another Track®」を活用し、観客のスマートフォンをそのままペンライト化することで、5万人規模のドームでも安定して全員を同時同期させるソリューションを確立しました。さらに、推し活グッズとしての光るアクスタや物理ペンライトとの連携により、ファンの体験価値を最大化しています。
+            <p className="text-lg md:text-xl text-text/90 leading-relaxed font-medium md:text-left mb-6">
+              従来のイベント演出で空間全体を連動させるような光の演出を行うには、大掛かりなシステムと専門の音響スペシャリストが必要不可欠でした。私たちが提供する音響透かし技術「Another Track®」を活用したソリューションは、音源に信号を埋め込むだけで利用できるため、特別な機材や知識がなくても簡単に導入できます。また電波にも干渉されないため、5万人規模のドームでも安定して観客のスマートフォンを直接連動させ、会場全体の演出を可能にします。
             </p>
             <footer className="flex items-center justify-end gap-4">
               <div className="text-right">
-                <div className="text-white font-bold">シヤチハタ株式会社</div>
+                <div className="text-text font-bold">シヤチハタ株式会社</div>
                 <div className="text-sm text-accent">デジタルソリューション開発担当</div>
               </div>
             </footer>

@@ -90,13 +90,17 @@ export function ProductLineup() {
             </p>
           </div>
 
-          {/* Video Wireframe */}
+          {/* Video Player */}
           <div className="w-full aspect-video bg-surface2 border border-border rounded-2xl flex items-center justify-center shadow-inner relative overflow-hidden group">
+            <video 
+              src="/video/m-choco.mp4" 
+              autoPlay 
+              loop 
+              muted 
+              playsInline
+              className="w-full h-full object-cover"
+            />
             <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-transparent pointer-events-none" />
-            <div className="flex flex-col items-center text-muted/40 group-hover:text-muted/60 transition-colors">
-              <MonitorPlay strokeWidth={1} className="w-16 h-16 mb-4 opacity-50" />
-              <span className="text-xs font-mono tracking-widest uppercase">Video Area</span>
-            </div>
           </div>
         </div>
 

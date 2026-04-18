@@ -36,7 +36,7 @@ export function ProblemSolution() {
     <section className="py-24 bg-transparent border-t border-border/50" aria-labelledby="problem-solution-heading">
       <div className="container-custom">
         <h2 id="problem-solution-heading" className="text-3xl font-bold text-center mb-16 text-text">
-          従来のペンライト演出が抱える<br className="md:hidden"/>課題を解決
+          従来のペンライト・<br className="md:hidden"/>イベント演出が抱える課題を解決
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -72,10 +72,10 @@ export function ProblemSolution() {
               従来のイベント演出で空間全体を連動させるような光の演出を行うには、大掛かりなシステムと専門の音響スペシャリストが必要不可欠でした。私たちが提供する音響透かし技術「Another Track®」を活用したソリューションは、音源に信号を埋め込むだけで利用できるため、特別な機材や知識がなくても簡単に導入できます。また電波にも干渉されないため、5万人規模のドームでも安定して観客のスマートフォンを直接連動させ、会場全体の演出を可能にします。
             </p>
             <footer className="flex items-center justify-end gap-4">
-              <div className="text-right">
+              <cite className="not-italic text-right">
                 <div className="text-text font-bold">シヤチハタ株式会社</div>
                 <div className="text-sm text-accent">デジタルソリューション開発担当</div>
-              </div>
+              </cite>
             </footer>
           </blockquote>
         </div>

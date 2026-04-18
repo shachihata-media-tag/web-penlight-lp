@@ -60,6 +60,21 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
         disallow: ["/thanks", "/api/", "/goods"],
       },
+      {
+        userAgent: "Meta-ExternalAgent",
+        allow: "/",
+        disallow: ["/thanks", "/api/", "/goods"],
+      },
+      {
+        userAgent: "YouBot",
+        allow: "/",
+        disallow: ["/thanks", "/api/", "/goods"],
+      },
+      {
+        userAgent: "Amazonbot",
+        allow: "/",
+        disallow: ["/thanks", "/api/", "/goods"],
+      },
     ],
     sitemap: `${baseUrl}/sitemap.xml`,
   };

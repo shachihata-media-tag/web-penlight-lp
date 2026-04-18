@@ -4,7 +4,7 @@ export function Specs() {
   return (
     <section className="py-24 bg-transparent border-t border-border/50">
       <div className="container-custom">
-        <h2 className="text-3xl font-bold mb-12 text-center text-text">仕様スペック</h2>
+        <h2 className="text-3xl font-bold mb-12 text-center text-text">音響連動ペンライト・イベント演出システム 仕様スペック</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Colors */}

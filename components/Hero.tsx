@@ -48,7 +48,7 @@ export function Hero() {
           </div>
           
           <h1 className="text-4xl md:text-5xl xl:text-6xl font-bold leading-tight text-white relative">
-            <span className="sr-only">スマホペンライト｜推し活・ライブ演出を音響連動で会場と配信をひとつにするソリューション</span>
+            <span className="sr-only">スマホペンライト｜ペンライト・アクスタ・イベント演出を音響連動で会場と配信をひとつにするソリューション｜推し活グッズ連動対応</span>
             <span aria-hidden="true" className="block">
               会場と配信を<br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-[#FF8C00]">{"\u201C"}ひとつ{"\u201D"}にする、</span><br />

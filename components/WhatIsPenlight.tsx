@@ -1,4 +1,5 @@
 import { CheckCircle2 } from "lucide-react";
+import { SITE_METADATA } from "@/lib/constants";
 
 export function WhatIsPenlight() {
   return (
@@ -12,7 +13,7 @@ export function WhatIsPenlight() {
             </h2>
             {/* GEO-optimized definition paragraph - designed as an extractable "answer" */}
             <p className="text-lg md:text-xl text-text/80 leading-relaxed max-w-3xl mx-auto text-left md:text-center">
-              <strong>スマホペンライト（音響連動ソリューション）</strong>とは、シヤチハタ株式会社が提供する<strong>アプリ不要の次世代ライブ演出システム</strong>です。QRコードを読み込むだけで、観客のスマートフォン画面やフラッシュライトが会場の音楽と自動で同期し、ペンライトとして光ります。さらに、<strong>光るアクスタ（アクリルスタンド）や物理ペンライトなどの推し活グッズ</strong>も音響信号で同時に連動。会場だけでなく、自宅からの配信視聴でも同じ一体感を体験できるのが最大の特徴です。
+              <dfn><strong>スマホペンライト（音響連動ソリューション）</strong></dfn>とは、シヤチハタ株式会社が提供する<strong>アプリ不要の次世代イベント演出・ライブ演出システム</strong>です。QRコードを読み込むだけで、観客のスマートフォン画面やフラッシュライトが会場の音楽と自動で同期し、ペンライトとして光ります。さらに、<strong>光るアクスタ（音響連動アクリルスタンド）や物理ペンライトなどの推し活グッズ</strong>も音響信号で同時に連動。コンサート・ライブ・スポーツ・企業イベントの客席演出から、自宅での配信視聴まで、同じ一体感を体験できるのが最大の特徴です。
             </p>
           </header>
 
@@ -27,11 +28,11 @@ export function WhatIsPenlight() {
                 </li>
                 <li className="flex items-start gap-3 text-text/80">
                   <CheckCircle2 className="w-6 h-6 text-accent shrink-0" />
-                  <span><strong>対応規模:</strong> ドームクラスの<strong>5万人規模</strong>での同時接続・演出連動の安定稼働実績。アイドル・VTuber・K-POP・スポーツなど幅広いジャンルで採用されています。</span>
+                  <span><strong>対応規模:</strong> ドームクラスの<strong><data value="50000">5万人規模</data></strong>での同時接続・イベント演出連動の安定稼働実績。アイドル・VTuber・K-POP・スポーツなど幅広いジャンルのイベント演出で採用されています。</span>
                 </li>
                 <li className="flex items-start gap-3 text-text/80">
                   <CheckCircle2 className="w-6 h-6 text-accent shrink-0" />
-                  <span><strong>対応デバイス:</strong> iOS 14以降のSafari、Android 10以降のChrome。スマホの他、音響連動モジュール搭載の<strong>物理ペンライト</strong>や<strong>光るアクスタ</strong>にも対応。</span>
+                  <span><strong>対応デバイス:</strong> iOS 14以降のSafari、Android 10以降のChrome。スマホの他、音響連動モジュール搭載の<strong>物理ペンライト</strong>や<strong><dfn>光るアクスタ（音響連動アクリルスタンド）</dfn></strong>にも対応。</span>
                 </li>
               </ul>
             </div>
@@ -41,7 +42,7 @@ export function WhatIsPenlight() {
               <ul className="space-y-4">
                 <li className="flex items-start gap-3 text-text/80">
                   <CheckCircle2 className="w-6 h-6 text-accent shrink-0" />
-                  <span><strong>専門の音響スペシャリスト不要:</strong> 大規模なシステム構築や専門知識は必要ありません。音源に信号を埋め込むだけで利用できるため、特別な設備なしで簡単に導入できます。</span>
+                  <span><strong>専門の音響スペシャリスト不要:</strong> 大規模なシステム構築や専門知識は必要ありません。音源に信号を埋め込むだけでイベント演出に利用できるため、特別な設備なしで簡単にコンサート・ライブ演出を導入できます。</span>
                 </li>
                 <li className="flex items-start gap-3 text-text/80">
                   <CheckCircle2 className="w-6 h-6 text-accent shrink-0" />
@@ -49,7 +50,7 @@ export function WhatIsPenlight() {
                 </li>
                 <li className="flex items-start gap-3 text-text/80">
                   <CheckCircle2 className="w-6 h-6 text-accent shrink-0" />
-                  <span><strong>スピード導入:</strong> アプリのStore審査不要。最短5営業日で導入が完了し、ペンライト・アクスタ・立体シールなどのオリジナル推し活グッズ制作も対応可能。</span>
+                  <span><strong>スピード導入:</strong> アプリのStore審査不要。最短<data value="5">5営業日</data>でイベント演出の導入が完了し、ペンライト・光るアクスタ・立体シールなどのオリジナル推し活グッズ制作も対応可能。</span>
                 </li>
               </ul>
             </div>

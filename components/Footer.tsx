@@ -82,8 +82,9 @@ export function Footer() {
           </div>
         </div>
 
-        <div className='flex flex-col md:flex-row justify-between items-center pt-8 border-t border-border/50'>
+        <div className='flex flex-col md:flex-row justify-between items-center pt-8 border-t border-border/50 gap-2'>
           <p>&copy; {new Date().getFullYear()} Shachihata Inc. All rights reserved.</p>
+          <p className='text-xs text-muted/60'>最終更新: 2026年4月17日</p>
         </div>
       </div>
     </footer>

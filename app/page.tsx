@@ -1,11 +1,13 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/Hero";
+import { MessageSection } from "@/components/MessageSection";
 import { WhatIsPenlight } from "@/components/WhatIsPenlight";
 import { LogoCloud } from "@/components/LogoCloud";
 import { ProductLineup } from "@/components/ProductLineup";
 import { MobileStickyCTA } from "@/components/MobileStickyCTA";
 import { ProblemSolution } from "@/components/ProblemSolution";
+import { ComparisonTable } from "@/components/ComparisonTable";
 import { Walkthrough } from "@/components/Walkthrough";
 import { VideoCard } from "@/components/VideoCard";
 import { Presets } from "@/components/Presets";
@@ -26,6 +28,8 @@ export default function Home() {
       
       <Hero />
       
+      <MessageSection />
+
       <WhatIsPenlight />
       
       <LogoCloud />
@@ -33,10 +37,12 @@ export default function Home() {
       <ProductLineup />
       
       <ProblemSolution />
+
+      <ComparisonTable />
       
       {/* <Walkthrough /> */}
       
-      <Presets />
+      {/* <Presets /> */}
 
       <section
         id="case-video"
@@ -55,7 +61,7 @@ export default function Home() {
       
       {/* <Customization /> */}
 
-      <MiniEstimator />
+      {/* <MiniEstimator /> */}
 
       <LineSection />
 

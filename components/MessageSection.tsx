@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export function MessageSection() {
   return (
     <section className="py-24 bg-gradient-to-b from-white via-orange-50/50 to-surface relative z-10 overflow-hidden">
@@ -16,7 +18,7 @@ export function MessageSection() {
           <div className="space-y-6 text-lg text-text/80 leading-relaxed md:text-xl font-medium">
             <p>
               「ロット数が多くてグッズが作れない…」<br />
-              そんな悩みを抱える駆け出しの配信者さん、インフルエンサー候補の皆様へ。
+              そんな悩みを抱える配信者さん、インフルエンサー候補の皆様へ。
             </p>
             <p className="text-xl md:text-2xl font-bold text-text py-4">
               シヤチハタは、これから輝くあなたの挑戦を全力で応援します。
@@ -25,6 +27,15 @@ export function MessageSection() {
               小規模から無理なく作れる本格的なペンライトや光るアクスタ台座で、<br className="hidden lg:block" />
               ファンにあなたの「好き」を届けませんか？
             </p>
+          </div>
+          <div className="mt-12 flex justify-center">
+            <Image
+              src="/images/shachihata_100.jpg"
+              alt="シヤチハタ 100周年"
+              width={240}
+              height={222}
+              className="rounded-xl shadow-md"
+            />
           </div>
         </div>
       </div>

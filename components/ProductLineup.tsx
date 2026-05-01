@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { ImageSlideshow } from "./ImageSlideshow";
 import { Smartphone, Zap, Sparkles, MonitorPlay, ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 const PRODUCTS = [
@@ -35,7 +36,7 @@ const PRODUCTS = [
       "専用アプリ不要（会場連動の場合）",
     ],
     status: "highlight",
-    placeholderAspect: "aspect-video",
+    placeholderAspect: "aspect-square",
   },
   {
     id: "screen-penlight",
@@ -47,6 +48,7 @@ const PRODUCTS = [
       "アプリダウンロード不要",
       "QRですぐに参加",
       "オンライン配信にも対応",
+      "デジタル素材表示可能",
     ],
     status: "standard",
     placeholderAspect: "aspect-square",
@@ -93,7 +95,7 @@ export function ProductLineup() {
           {/* Video Player */}
           <div className="w-full aspect-video bg-surface2 border border-border rounded-2xl flex items-center justify-center shadow-inner relative overflow-hidden group">
             <video 
-              src="/video/m-choco.mp4" 
+              src="/video/m_choco.mp4" 
               autoPlay 
               loop 
               muted 
@@ -170,22 +172,32 @@ export function ProductLineup() {
           <div className="group relative overflow-hidden rounded-2xl bg-border p-[1px] shadow-sm hover:shadow-lg transition-all duration-300">
             <div className="absolute inset-[-100%] animate-[spin_3s_linear_infinite] opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,var(--color-accent)_50%,transparent_100%)]" />
             <div className="relative flex h-full w-full flex-col bg-surface rounded-[15px] z-10 overflow-hidden transition-colors group-hover:bg-surface/95">
-              <div className="p-8 sm:p-10 flex-1">
-                 <h3 className="text-2xl font-bold mb-3">{PRODUCTS[1].title}</h3>
-                 <p className="text-muted leading-relaxed mb-8 text-sm">
+              <div className="p-6 lg:p-8 pb-0 flex-1">
+                 <h3 className="text-xl font-bold mb-3">{PRODUCTS[1].title}</h3>
+                 <p className="text-muted text-sm leading-relaxed mb-4">
                    {PRODUCTS[1].description}
                  </p>
+                 <div className="flex flex-wrap gap-2 mb-6">
+                    {PRODUCTS[1].features.map((feature, fIdx) => (
+                      <div key={fIdx} className="text-[11px] text-muted bg-black/5 px-2 py-1 rounded">
+                          {feature}
+                      </div>
+                    ))}
+                 </div>
               </div>
-              {/* Image Placeholder */}
-              <div className="px-8 pb-8 pt-0 mt-auto">
+              <div className="px-6 lg:px-8 pb-6 lg:pb-8 pt-4 mt-auto">
                   <div className={cn(
                     PRODUCTS[1].placeholderAspect,
-                    "w-full border border-border bg-gradient-to-tr from-surface2 to-surface relative overflow-hidden transition-all duration-500 rounded-xl"
+                    "w-full max-w-[200px] mx-auto border border-border bg-gradient-to-tr from-surface2 to-surface relative overflow-hidden transition-all duration-500 rounded-xl"
                   )}>
-                    <div className="absolute inset-0 flex flex-col items-center justify-center text-muted/40">
-                      <Sparkles className="w-8 h-8 mb-2 opacity-50" strokeWidth={1} />
-                      <span className="text-[10px] font-mono tracking-widest uppercase">Image Area</span>
-                    </div>
+                    <ImageSlideshow
+                      images={[
+                        "/images/4_pink.jpg",
+                        "/images/9_L.Bl.jpg",
+                        "/images/13_L.Yellow.jpg"
+                      ]}
+                      interval={3000}
+                    />
                   </div>
               </div>
             </div>
@@ -195,49 +207,68 @@ export function ProductLineup() {
           <div className="group relative overflow-hidden rounded-2xl bg-border p-[1px] shadow-sm hover:shadow-lg transition-all duration-300">
             <div className="absolute inset-[-100%] animate-[spin_3s_linear_infinite] opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,var(--color-accent)_50%,transparent_100%)]" />
             <div className="relative flex h-full w-full flex-col bg-surface rounded-[15px] z-10 overflow-hidden transition-colors group-hover:bg-surface/95">
-              <div className="p-8 pb-0 flex-1">
+              <div className="p-6 lg:p-8 pb-0 flex-1">
                  <h3 className="text-xl font-bold mb-3">{PRODUCTS[2].title}</h3>
-                 <p className="text-muted text-sm leading-relaxed mb-6">
+                 <p className="text-muted text-sm leading-relaxed mb-4">
                    {PRODUCTS[2].description}
                  </p>
+                 <div className="flex flex-wrap gap-2 mb-6">
+                    {PRODUCTS[2].features.map((feature, fIdx) => (
+                      <div key={fIdx} className="text-[11px] text-muted bg-black/5 px-2 py-1 rounded">
+                          {feature}
+                      </div>
+                    ))}
+                 </div>
               </div>
-              <div className="px-8 pb-8 pt-4 mt-auto">
+              <div className="px-6 lg:px-8 pb-6 lg:pb-8 pt-4 mt-auto">
                   <div className={cn(
                     PRODUCTS[2].placeholderAspect,
                     "w-full max-w-[200px] mx-auto border border-border bg-surface2 relative overflow-hidden transition-all duration-500 rounded-xl"
                   )}>
-                     <div className="absolute inset-0 flex flex-col items-center justify-center text-muted/30">
-                      <span className="text-[10px] font-mono tracking-widest uppercase">Image Area</span>
-                    </div>
+                    <Image
+                      src="/images/smartphone_penlight.jpg"
+                      alt={PRODUCTS[2].title as string}
+                      fill
+                      className="object-cover"
+                    />
                   </div>
               </div>
             </div>
           </div>
 
-          {/* Fourth Product (Coming Soon) */}
-          <div className="group relative overflow-hidden rounded-2xl bg-border p-[1px] opacity-80 hover:opacity-100 transition-all duration-300">
+          {/* Fourth Product */}
+          <div className="group relative overflow-hidden rounded-2xl bg-border p-[1px] shadow-sm hover:shadow-lg transition-all duration-300">
              <div className="absolute inset-[-100%] animate-[spin_3s_linear_infinite] opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,var(--color-accent)_50%,transparent_100%)]" />
-             <div className="relative flex h-full w-full flex-col bg-surface2 rounded-[15px] z-10 overflow-hidden">
-               {/* Diagonal stripes for "Coming Soon" feel */}
-               <div className="absolute inset-0 bg-[repeating-linear-gradient(45deg,transparent,transparent_10px,rgba(0,0,0,0.02)_10px,rgba(0,0,0,0.02)_20px)]" />
-               
-               <div className="p-8 relative z-10 flex flex-col h-full">
-                  <div className="flex justify-between items-start mb-6 lg:mb-12">
-                     <h3 className="text-xl font-bold text-muted group-hover:text-text transition-colors">{PRODUCTS[3].title}</h3>
-                     <span className="px-3 py-1 bg-black/5 text-[10px] font-mono tracking-widest text-muted border border-border rounded">COMING SOON</span>
+             <div className="relative flex h-full w-full flex-col bg-surface rounded-[15px] z-10 overflow-hidden transition-colors group-hover:bg-surface/95">
+               <div className="p-6 lg:p-8 pb-0 flex-1 relative z-10">
+                  <div className="flex justify-between items-start mb-3 gap-2">
+                     <h3 className="text-xl font-bold">{PRODUCTS[3].title}</h3>
                   </div>
-                  
-                  <div className="mt-auto">
-                     <p className="text-muted/70 text-sm leading-relaxed max-w-sm mb-6">
-                       {PRODUCTS[3].description}
-                     </p>
-                     <div className="flex flex-wrap gap-2">
-                        {PRODUCTS[3].features.map((feature, fIdx) => (
-                          <div key={fIdx} className="text-[11px] text-muted bg-black/5 px-2 py-1 rounded">
-                             {feature}
-                          </div>
-                        ))}
-                     </div>
+                  <p className="text-muted text-sm leading-relaxed mb-4">
+                    {PRODUCTS[3].description}
+                  </p>
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    {PRODUCTS[3].features.map((feature, fIdx) => (
+                      <div key={fIdx} className="text-[11px] text-muted bg-black/5 px-2 py-1 rounded">
+                          {feature}
+                      </div>
+                    ))}
+                  </div>
+               </div>
+               
+               <div className="px-6 lg:px-8 pb-6 lg:pb-8 pt-4 mt-auto relative z-10">
+                  <div className={cn(
+                    PRODUCTS[3].placeholderAspect,
+                    "w-full max-w-[200px] mx-auto border border-border bg-surface2 relative overflow-hidden transition-all duration-500 rounded-xl"
+                  )}>
+                    <ImageSlideshow
+                      images={[
+                        "/images/akusuta02_2.jpg",
+                        "/images/akusuta04_2.jpg",
+                        "/images/akusuta01_2.jpg"
+                      ]}
+                      interval={3500}
+                    />
                   </div>
                </div>
              </div>

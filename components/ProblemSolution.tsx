@@ -41,21 +41,21 @@ export function ProblemSolution() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {PROBLEMS.map((item, i) => (
-            <div key={i} className="group relative bg-surface border border-border rounded-card p-6 hover:bg-surface2 transition-colors hover:shadow-lg">
+            <div key={i} className="group relative flex flex-col h-full bg-surface border border-border rounded-card p-6 hover:bg-surface2 transition-colors hover:shadow-lg">
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-border to-transparent group-hover:via-accent/50 transition-all" />
               
-              <div className="mb-4 text-muted group-hover:text-accent transition-colors">
+              <div className="mb-5 text-muted group-hover:text-accent transition-colors">
                 <item.icon size={32} />
               </div>
               
-              <h3 className="text-lg font-bold mb-2 text-text">{item.problem}</h3>
-              <p className="text-sm text-muted leading-relaxed mb-6 h-16">
+              <h3 className="text-lg font-bold mb-3 text-text break-keep" style={{ wordBreak: 'auto-phrase' as any }}>{item.problem}</h3>
+              <p className="text-sm text-muted leading-relaxed mb-6">
                 {item.text}
               </p>
 
-              <div className="pt-6 border-t border-border/50">
-                <span className="block text-xs font-bold text-accent mb-1">SOLUTION</span>
-                <h4 className="text-xl font-bold text-text mb-2">{item.solution}</h4>
+              <div className="pt-6 border-t border-border/50 mt-auto">
+                <span className="block text-xs font-bold text-accent mb-2 tracking-wider">SOLUTION</span>
+                <h4 className="text-xl font-bold text-text mb-3">{item.solution}</h4>
                 <p className="text-sm text-text/80 leading-relaxed">
                   {item.solutionText}
                 </p>

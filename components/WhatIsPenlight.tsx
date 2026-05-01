@@ -9,12 +9,23 @@ export function WhatIsPenlight() {
           {/* AI-Optimized Header (Clear definition for RAG crawlers + Featured Snippet) */}
           <header className="mb-12 text-center">
             <h2 id="what-is-penlight" className="text-3xl md:text-4xl font-bold mb-6 text-text">
-              スマホペンライト（音響連動ソリューション）とは？
+              楽曲連動ソリューションとは？
             </h2>
             {/* GEO-optimized definition paragraph - designed as an extractable "answer" */}
-            <p className="text-lg md:text-xl text-text/80 leading-relaxed max-w-3xl mx-auto text-left md:text-center">
-              <dfn><strong>スマホペンライト（音響連動ソリューション）</strong></dfn>とは、シヤチハタ株式会社が提供する<strong>アプリ不要の次世代イベント演出・ライブ演出システム</strong>です。QRコードを読み込むだけで、観客のスマートフォン画面やフラッシュライトが会場の音楽と自動で同期し、ペンライトとして光ります。さらに、<strong>光るアクスタ（音響連動アクリルスタンド）や物理ペンライトなどの推し活グッズ</strong>も音響信号で同時に連動。コンサート・ライブ・スポーツ・企業イベントの客席演出から、自宅での配信視聴まで、同じ一体感を体験できるのが最大の特徴です。
+            <p className="text-lg md:text-xl text-text/80 leading-relaxed max-w-3xl mx-auto text-left md:text-center mb-12">
+              <dfn><strong>楽曲連動ソリューション</strong></dfn>とは、シヤチハタ株式会社が提供する<strong>アプリ不要の次世代イベント演出・ライブ演出システム</strong>です。会場の音楽（音響信号）と自動で同期し、観客のスマートフォン画面やフラッシュライトだけでなく、<strong>光るアクスタ（音響連動アクリルスタンド）や専用の物理ペンライトなどの推し活グッズ</strong>も一斉に連動して光ります。コンサート・ライブ・スポーツ・企業イベントの客席演出から、自宅での配信視聴まで、ハードウェアの壁を越えてすべての人に同じ一体感を届けることができるのが最大の特徴です。
             </p>
+
+            <div className="w-full max-w-4xl mx-auto aspect-video bg-surface2 border border-border rounded-2xl flex items-center justify-center shadow-inner relative overflow-hidden">
+              <video 
+                src="/video/solution.mp4" 
+                autoPlay 
+                loop 
+                muted 
+                playsInline
+                className="w-full h-full object-cover"
+              />
+            </div>
           </header>
 
           {/* AI-Optimized Data & Stats List Structure */}

@@ -5,9 +5,8 @@ import { TorchSimulator, TorchSimulatorProps } from "./TorchSimulator";
 import { PhoneSimulator } from "./PhoneSimulator";
 import { PENLIGHT_COLORS } from "@/lib/constants";
 import { cn } from "@/lib/utils";
-import { ArrowRight, Play, Settings2, FileText } from "lucide-react";
+import { ArrowRight, Play, Settings2 } from "lucide-react";
 import Link from "next/link";
-import { WhitepaperModal } from "./WhitepaperModal";
 
 export function Hero() {
   const [activeColor, setActiveColor] = useState<string>(PENLIGHT_COLORS[0].value);
@@ -15,7 +14,6 @@ export function Hero() {
   const [status, setStatus] = useState<TorchSimulatorProps["status"]>("detecting");
   const [mode, setMode] = useState<"venue" | "stream">("venue");
   const [activeTab, setActiveTab] = useState<"torch" | "screen">("torch");
-  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const toggleMode = () => setMode((p) => (p === "venue" ? "stream" : "venue"));
 
@@ -63,16 +61,9 @@ export function Hero() {
           </p>
 
           <div className="flex flex-wrap gap-4 pt-4">
-             <button
-               onClick={() => setIsModalOpen(true)}
-               className="flex items-center justify-center px-8 py-4 text-sm font-bold text-white bg-accent rounded-md hover:bg-accent/90 transition-all shadow-glow hover:shadow-lg hover:-translate-y-0.5"
-             >
-               <FileText className="w-4 h-4 mr-2" />
-               実績・資料をチェック
-             </button>
              <Link
                href="#demos"
-               className="flex items-center justify-center px-6 py-4 text-sm font-bold text-white border border-white/20 bg-white/10 rounded-md hover:bg-white/20 transition-all"
+               className="flex items-center justify-center px-8 py-4 text-sm font-bold text-white bg-pink-500 rounded-md hover:bg-pink-600 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
                style={{ whiteSpace: "nowrap" }}
              >
                デモを体験
@@ -218,7 +209,6 @@ export function Hero() {
         </div>
       </div>
 
-      <WhitepaperModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </section>
   );
 }

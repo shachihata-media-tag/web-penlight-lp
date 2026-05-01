@@ -35,7 +35,7 @@ export function Header() {
             target='_blank'
             rel='noopener noreferrer'
             className='hidden sm:flex items-center justify-center px-4 py-2 text-xs font-bold text-text border border-border rounded-pill hover:bg-surface2 transition-colors'>
-            概要資料
+            コーポレートサイト
           </a>
           <Link
             href='#contact'

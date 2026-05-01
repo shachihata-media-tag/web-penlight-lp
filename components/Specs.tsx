@@ -60,10 +60,6 @@ export function Specs() {
                 </div>
             </div>
             <div className="mt-6 p-4 bg-surface rounded-lg border border-border/50 text-xs text-muted leading-relaxed space-y-3">
-                <p>
-                    本システムはShachihataの独自技術「音響透かし」を使用しています。<br/>
-                    人間の耳には聞こえにくい高周波帯域にデータを重畳します。
-                </p>
                 <div className="flex items-start gap-2 bg-accent/10 p-3 rounded-md text-accent/90 border border-accent/20">
                     <div className="font-bold shrink-0">エンタープライズ実績:</div>
                     <div className="leading-tight text-muted">

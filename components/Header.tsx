@@ -20,9 +20,7 @@ export function Header() {
           <Link href='#demos' className='text-muted hover:text-text transition-colors'>
             デモ・体験
           </Link>
-          <Link href='#pricing' className='text-muted hover:text-text transition-colors'>
-            費用感
-          </Link>
+
           <Link href='#faq' className='text-muted hover:text-text transition-colors'>
             FAQ
           </Link>

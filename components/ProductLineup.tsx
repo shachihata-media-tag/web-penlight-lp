@@ -229,6 +229,7 @@ export function ProductLineup() {
                       src="/images/smartphone_penlight.jpg"
                       alt={PRODUCTS[2].title as string}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       className="object-cover"
                     />
                   </div>

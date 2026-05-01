@@ -35,6 +35,7 @@ export function MessageSection() {
               width={240}
               height={222}
               className="rounded-xl shadow-md"
+              style={{ width: 'auto', height: 'auto' }}
             />
           </div>
         </div>

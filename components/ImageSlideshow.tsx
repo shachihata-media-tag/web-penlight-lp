@@ -39,6 +39,7 @@ export function ImageSlideshow({
           src={src}
           alt={`Slide ${index + 1}`}
           fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
           className={cn(
             "object-cover transition-opacity duration-1000 ease-in-out",
             index === currentIndex ? "opacity-100" : "opacity-0",

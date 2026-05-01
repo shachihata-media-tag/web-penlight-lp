@@ -7,10 +7,10 @@ export function MessageSection() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-3xl h-64 bg-accent/5 blur-[100px] rounded-full pointer-events-none" />
       
       <div className="container-custom relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-4xl xl:max-w-5xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl xl:text-5xl font-bold mb-8 leading-snug text-text">
             「いつか」の夢を「いま」叶えよう。<br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-[#FF8C00] mt-2 inline-block">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-[#FF8C00] mt-2 inline-block xl:whitespace-nowrap">
               あなたの第一歩を照らすオリジナルグッズ。
             </span>
           </h2>

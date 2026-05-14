@@ -78,10 +78,10 @@ export const StructuredData = () => {
   const productData = {
     "@type": "SoftwareApplication",
     "@id": `${baseUrl}/#product`,
-    name: "音響連動スマホペンライト",
-    alternateName: ["Webペンライト", "Sound-Synced WEB Penlight", "音響連動ソリューション", "スマホペンライト"],
+    name: "音響連動グッズ制作サービス",
+    alternateName: ["スマホペンライト", "音響連動ソリューション", "Sound-Synced Goods", "推し活グッズ制作"],
     description:
-      "会場と配信を\"ひとつ\"にする、音響連動スマホペンライト。専用アプリ不要、QRコードで即参加できるライブ・コンサート・推し活の演出ソリューション。音響透かし技術「Another Track®」を採用し、5万人規模のドームでも安定動作。スマホ画面だけでなく物理ペンライトやアクスタ（光るアクリルスタンド）との連携も可能。",
+      "あなたの『音』がグッズになる。スマホ用立体シールなら小ロットからオリジナルデザインで制作可能。光るアクスタや物理ペンライトも音響連動で制作できます。プロ野球ドーム5万人規模で採用されるシヤチハタの音響透かし技術（Another Track®）を使用し、専用アプリ不要で会場・配信を問わずファンのグッズが連動して光ります。",
     image: `${baseUrl}/og-image.png`,
     applicationCategory: "MultimediaApplication",
     operatingSystem: "iOS 14+, Android 10+",
@@ -94,24 +94,24 @@ export const StructuredData = () => {
     },
     audience: {
       "@type": "Audience",
-      audienceType: "イベント主催者、コンサートプロモーター、ライブ演出プランナー、スポーツイベント運営者、推し活ファン、ライブ配信者",
+      audienceType: "クリエイター、配信者、VTuber、インフルエンサー、推し活ファン、イベント主催者、ライブ演出プランナー",
     },
-    keywords: "ペンライト,スマホペンライト,推し活,アクスタ,ライブ演出,コンサート演出,イベント演出,音響連動,配信連動,客席演出,観客参加型演出",
+    keywords: "推し活グッズ 制作,オリジナルグッズ 小ロット,音響連動グッズ,スマホペンライト,光るアクスタ,配信者 グッズ,VTuber グッズ,ライブ演出,イベント演出",
     featureList: [
+      "立体シールなら小ロットからオリジナル制作可能",
       "専用アプリ不要 - QRコードで即参加",
-      "会場・配信同時連動 - 自宅からも推し活参加",
-      "音響透かし通信でBluetooth干渉なし",
-      "5万人同時アクセス実績（ドーム規模）",
+      "配信の音に反応してファンのグッズが光る",
       "14色の推しカラー対応",
-      "物理ペンライト・アクスタ連動対応",
-      "最短5営業日で導入可能",
-      "観客側の利用完全無料",
+      "ファン側の利用は完全無料",
+      "物理ペンライト・光るアクスタも制作対応",
+      "プロ野球ドーム5万人規模でも安定動作の実績",
+      "音響透かし通信でBluetooth干渉なし",
     ],
     offers: {
       "@type": "Offer",
       price: "0",
       priceCurrency: "JPY",
-      description: "観客（ファン）側の利用は完全無料。主催者様向け導入費用は別途お問い合わせください。",
+      description: "ファン側の利用は完全無料。グッズ制作・導入費用は無料見積もりフォームよりお問い合わせください。",
     },
   };
 
@@ -191,9 +191,9 @@ export const StructuredData = () => {
     "@type": ["WebPage", "ItemPage", "TechArticle"],
     "@id": `${baseUrl}/#article`,
     url: baseUrl,
-    name: "楽曲連動ソリューションとは｜ペンライト・アクスタ・イベント演出の新定番",
-    headline: "会場と配信をひとつにする、ペンライト・アクスタ連動の音響連動ソリューション",
-    description: "シヤチハタ株式会社が提供する、アプリ不要のスマホ音響連動ペンライトシステム。推し活・ライブ・コンサート・イベント演出を革新する次世代ソリューションの公式機能・導入メリット解説ページです。光るアクスタ（アクリルスタンド）との連動にも対応。",
+    name: "音響連動グッズ制作とは｜クリエイター向け推し活グッズの新しいカタチ",
+    headline: "あなたの音がグッズになる – 小ロットから作れる音響連動の推し活グッズ制作サービス",
+    description: "シヤチハタ株式会社が提供する、クリエイター・配信者向けの音響連動グッズ制作サービス。スマホ用立体シールの小ロット制作から、光るアクスタやペンライトまで。プロ野球ドームなど大規模イベントでも採用される技術を、個人クリエイターから企業まで幅広くご利用いただけます。",
     image: `${baseUrl}/og-image.png`,
     datePublished: "2024-01-01T00:00:00+09:00",
     dateModified: new Date().toISOString(),
@@ -222,8 +222,8 @@ export const StructuredData = () => {
   const itemListData = {
     "@type": "ItemList",
     "@id": `${baseUrl}/#product-lineup`,
-    name: "音響連動ソリューション製品ラインナップ｜ペンライト・アクスタ・スマホライト",
-    description: "シヤチハタの音響連動ペンライト・推し活グッズの全ラインナップ。スマホペンライト、物理ペンライト、光るアクスタ（アクリルスタンド）、立体シールの4製品を展開。",
+    name: "音響連動グッズ 製品ラインナップ｜立体シール・ペンライト・アクスタ",
+    description: "シヤチハタの音響連動グッズ全ラインナップ。スマホ用立体シール（小ロット対応）、スマホペンライト、物理ペンライト、光るアクスタ（アクリルスタンド）の4製品を展開。",
     itemListOrder: "https://schema.org/ItemListOrderDescending",
     numberOfItems: 4,
     itemListElement: [
@@ -258,22 +258,22 @@ export const StructuredData = () => {
   const offerCatalogData = {
     "@type": "OfferCatalog",
     "@id": `${baseUrl}/#services`,
-    name: "ペンライト・アクスタ音響連動ソリューション サービス一覧",
+    name: "音響連動グッズ制作 サービス一覧",
     itemListElement: [
       {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "イベント演出導入パッケージ",
-          description: "音響透かし埋め込み・専用ページ制作・ホスティングを含むイベント演出導入サービス。最短5営業日で稼働。",
+          name: "オリジナル推し活グッズ制作",
+          description: "スマホ用立体シールの小ロット制作や、オリジナルデザインの光るアクスタ・物理ペンライトなどの推し活グッズ制作サービス。クリエイターから企業まで対応。",
         },
       },
       {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "オリジナル推し活グッズ制作",
-          description: "オリジナルデザインの物理ペンライト・光るアクスタ（アクリルスタンド）・立体シールなどの推し活グッズ制作サービス。",
+          name: "イベント演出・配信連動パッケージ",
+          description: "音響透かし埋め込み・専用ページ制作・ホスティングを含むイベント演出導入サービス。小規模ライブからドーム規模まで対応。",
         },
       },
     ],

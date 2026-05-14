@@ -100,6 +100,7 @@ export function ProductLineup() {
               loop 
               muted 
               playsInline
+              title="音響連動グッズの活用シーン"
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-transparent pointer-events-none" />
@@ -197,6 +198,7 @@ export function ProductLineup() {
                         "/images/13_L.Yellow.jpg"
                       ]}
                       interval={3000}
+                      altPrefix="音響連動型ペンライト"
                     />
                   </div>
               </div>
@@ -269,6 +271,7 @@ export function ProductLineup() {
                         "/images/akusuta01_2.jpg"
                       ]}
                       interval={3500}
+                      altPrefix="光るアクスタ（音響連動アクリルスタンド）"
                     />
                   </div>
                </div>

@@ -27,7 +27,7 @@ export function MobileStickyCTA() {
         href="#contact"
         className="flex items-center justify-center w-full py-3.5 text-sm font-bold text-white bg-accent rounded-pill shadow-glow"
       >
-        お問い合わせ
+        無料見積もり・サンプル請求
       </Link>
     </div>
   );

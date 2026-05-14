@@ -12,8 +12,8 @@ export function FAQ() {
   return (
     <section id="faq" className="py-24 bg-transparent" aria-label="よくあるご質問">
       <div className="container-custom max-w-3xl">
-        <h2 className="text-3xl font-bold mb-4 text-center text-text">ペンライト・アクスタ・イベント演出 FAQ</h2>
-        <p className="text-sm text-muted text-center mb-12">スマホペンライト・光るアクスタ・音響連動イベント演出に関するよくあるご質問</p>
+        <h2 className="text-3xl font-bold mb-4 text-center text-text">推し活グッズ・音響連動グッズ制作 FAQ</h2>
+        <p className="text-sm text-muted text-center mb-12">スマホ用立体シールの小ロット制作や音響連動の仕組みに関するよくあるご質問</p>
         
         {FAQ_CATEGORIES.map((cat) => {
           const catFaqs = FAQS.filter((f) => 'category' in f && f.category === cat.id);

@@ -28,6 +28,7 @@ export function Hero() {
           muted
           playsInline
           preload="metadata"
+          title="音響連動グッズのイメージ動画"
           className="absolute top-0 left-0 w-full h-full object-cover bg-black"
         >
           <source src="/video/webpenlight.mp4" type="video/mp4" />
@@ -46,18 +47,18 @@ export function Hero() {
           </div>
           
           <h1 className="text-4xl md:text-5xl xl:text-6xl font-bold leading-tight text-white relative">
-            <span className="sr-only">スマホペンライト｜ペンライト・アクスタ・イベント演出を音響連動で会場と配信をひとつにするソリューション｜推し活グッズ連動対応</span>
+            <span className="sr-only">推し活グッズ・音響連動グッズ制作｜スマホ用立体シールを小ロットから</span>
             <span aria-hidden="true" className="block">
-              会場と配信を<br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-[#FF8C00]">{"\u201C"}ひとつ{"\u201D"}にする、</span><br />
-              <span className="inline-block whitespace-nowrap">音響連動ソリューション</span>
+              あなたの「音」が<br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-[#FF8C00]">グッズ</span>になる。<br />
+              <span className="inline-block whitespace-nowrap text-3xl md:text-4xl xl:text-5xl mt-2">次世代の推し活グッズ制作</span>
             </span>
           </h1>
 
           <p className="text-lg text-white/70 max-w-xl leading-relaxed">
-            スマホがペンライトに。アクスタも光る。<br className="md:hidden" />推し活グッズが音で同期する新体験。<br className="hidden md:block" />
-            専用アプリ不要で、ライブ会場も<br className="md:hidden" />自宅の配信視聴も、<br className="hidden md:block" />
-            音に込めた信号で一斉にシンクロします。
+            スマホ用立体シールなら<br className="md:hidden" />オリジナルデザインで小ロットから制作可能。<br className="hidden md:block" />
+            プロ野球ドームで採用されるシヤチハタの音響連動技術を、<br className="md:hidden" />
+            あなたの配信や小規模ライブでも。
           </p>
 
           <div className="flex flex-wrap gap-4 pt-4">
@@ -74,15 +75,15 @@ export function Hero() {
           <div className="grid grid-cols-3 gap-4 pt-8 border-t border-white/20">
              <div className="text-white">
                <div className="text-2xl font-bold mb-1">0秒</div>
-               <div className="text-xs text-white/70">アプリDL不要<br/>即座に参加</div>
+               <div className="text-xs text-white/70">アプリDL不要<br/>即座に反応</div>
              </div>
              <div className="text-white">
                <div className="text-2xl font-bold mb-1">∞</div>
                <div className="text-xs text-white/70">会場・配信<br/>どこでも連動</div>
              </div>
              <div className="text-white">
-               <div className="text-2xl font-bold mb-1">安価</div>
-               <div className="text-xs text-white/70">専用端末不要<br/>コスト大幅減</div>
+               <div className="text-2xl font-bold mb-1">少部数</div>
+               <div className="text-xs text-white/70">立体シールなら<br/>小ロット対応</div>
              </div>
           </div>
 

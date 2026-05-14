@@ -9,6 +9,7 @@ interface ImageSlideshowProps {
   interval?: number;
   className?: string;
   imageClassName?: string;
+  altPrefix?: string;
 }
 
 export function ImageSlideshow({
@@ -16,6 +17,7 @@ export function ImageSlideshow({
   interval = 4000,
   className,
   imageClassName,
+  altPrefix = "製品イメージ",
 }: ImageSlideshowProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -37,7 +39,7 @@ export function ImageSlideshow({
         <Image
           key={src}
           src={src}
-          alt={`Slide ${index + 1}`}
+          alt={`${altPrefix} ${index + 1}`}
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
           className={cn(

@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         url: SITE_METADATA.ogImage,
         width: 1200,
         height: 630,
-        alt: "スマホペンライト - ペンライト・アクスタ・イベント演出の音響連動ソリューション｜推し活グッズ連動対応 | Shachihata",
+        alt: "音響連動グッズ制作 – スマホ用立体シール・光るアクスタ・ペンライト | Shachihata",
         type: "image/png",
       },
     ],

@@ -9,7 +9,7 @@ export function Header() {
         {/* Brand */}
         <div className='flex items-center gap-3'>
           <Image src='/shachihata-logo.png' alt='Shachihata' width={120} height={40} className='h-8 w-auto object-contain brightness-0' priority />
-          <span className='text-xs text-text border-l border-border/50 pl-3 py-1 hidden sm:block'>音響連動スマホペンライト</span>
+          <span className='text-xs text-text border-l border-border/50 pl-3 py-1 hidden sm:block'>音響連動グッズ制作</span>
         </div>
 
         {/* Desktop Nav */}

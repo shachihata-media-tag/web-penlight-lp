@@ -9,9 +9,9 @@ export function Footer() {
           <div className='col-span-1 md:col-span-2'>
             <Image src='/shachihata-logo.png' alt='シヤチハタ株式会社' width={120} height={40} className='h-8 w-auto object-contain mb-4 brightness-0' />
             <p className='leading-relaxed opacity-80'>
-              スマホペンライト・光るアクスタ・推し活グッズの音響連動ソリューション
+              あなたの「音」がグッズになる。クリエイター・配信者から企業まで、
               <br />
-              会場と配信を、ひとつの光でつなぐ。
+              音響連動グッズの制作・導入をサポートします。
             </p>
           </div>
           <nav aria-label="プロダクトナビゲーション">
@@ -28,8 +28,8 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href='#pricing' className='hover:text-text transition-colors'>
-                  費用感
+                <Link href='#demos' className='hover:text-text transition-colors'>
+                  デモ体験
                 </Link>
               </li>
               <li>
@@ -84,7 +84,7 @@ export function Footer() {
 
         <div className='flex flex-col md:flex-row justify-between items-center pt-8 border-t border-border/50 gap-2'>
           <p>&copy; {new Date().getFullYear()} Shachihata Inc. All rights reserved.</p>
-          <p className='text-xs text-muted/60'>最終更新: 2026年4月17日</p>
+          <p className='text-xs text-muted/60'>最終更新: 2026年5月2日</p>
         </div>
       </div>
     </footer>

@@ -15,9 +15,9 @@ export function LogoCloud() {
           <div className="flex w-max animate-marquee hover:[animation-play-state:paused]">
             <div className="flex gap-3 md:gap-4 px-1.5 md:px-2">
               {[
-                "プロ野球", "映画・エンターテインメント", "プロバスケットボール", 
-                "動画配信", "デジタルスタンプラリー", "来店キャンペーン", 
-                "商品訴求", "大手コンビニエンスストア", "アクリルスタンド"
+                "大型音楽フェス", "VTuber配信", "オンラインライブ", 
+                "クラウドファンディング", "限定グッズ", "アクリルスタンド", 
+                "スマホペンライト", "立体シール", "プロ野球実績"
               ].map((tag, i) => (
                 <div key={`r1-1-${i}`} className="group flex items-center justify-center px-5 py-2.5 rounded-full border border-border bg-surface shadow-sm hover:border-accent hover:shadow-[0_0_15px_rgba(255,59,124,0.2)] transition-all duration-300 cursor-default hover:-translate-y-0.5 whitespace-nowrap shrink-0">
                    <span className="text-accent/60 group-hover:text-accent group-hover:drop-shadow-[0_0_8px_var(--color-accent)] transition-all duration-300 mr-1 font-bold">#</span>
@@ -28,9 +28,9 @@ export function LogoCloud() {
             {/* シームレス切り替え用の複製 */}
             <div className="flex gap-3 md:gap-4 px-1.5 md:px-2">
               {[
-                "プロ野球", "映画・エンターテインメント", "プロバスケットボール", 
-                "動画配信", "デジタルスタンプラリー", "来店キャンペーン", 
-                "商品訴求", "大手コンビニエンスストア", "アクリルスタンド"
+                "大型音楽フェス", "VTuber配信", "オンラインライブ", 
+                "クラウドファンディング", "限定グッズ", "アクリルスタンド", 
+                "スマホペンライト", "立体シール", "プロ野球実績"
               ].map((tag, i) => (
                 <div key={`r1-2-${i}`} className="group flex items-center justify-center px-5 py-2.5 rounded-full border border-border bg-surface shadow-sm hover:border-accent hover:shadow-[0_0_15px_rgba(255,59,124,0.2)] transition-all duration-300 cursor-default hover:-translate-y-0.5 whitespace-nowrap shrink-0">
                    <span className="text-accent/60 group-hover:text-accent group-hover:drop-shadow-[0_0_8px_var(--color-accent)] transition-all duration-300 mr-1 font-bold">#</span>
@@ -44,9 +44,9 @@ export function LogoCloud() {
           <div className="flex w-max animate-marquee-reverse hover:[animation-play-state:paused]">
             <div className="flex gap-3 md:gap-4 px-1.5 md:px-2">
               {[
-                "プロサッカー", "鉄道・交通機関", "音楽ライブイベント", 
-                "メタバース", "広告キャンペーン", "効果測定", 
-                "タイムセール", "ペンライト", "立体シール"
+                "同人イベント", "ゲーム実況", "歌ってみた", 
+                "リリース記念", "推し活", "ファンクラブ特典", 
+                "オンラインファンミ", "舞台・ミュージカル", "メタバース"
               ].map((tag, i) => (
                 <div key={`r2-1-${i}`} className="group flex items-center justify-center px-5 py-2.5 rounded-full border border-border bg-surface shadow-sm hover:border-accent hover:shadow-[0_0_15px_rgba(255,59,124,0.2)] transition-all duration-300 cursor-default hover:-translate-y-0.5 whitespace-nowrap shrink-0">
                    <span className="text-accent/60 group-hover:text-accent group-hover:drop-shadow-[0_0_8px_var(--color-accent)] transition-all duration-300 mr-1 font-bold">#</span>
@@ -57,9 +57,9 @@ export function LogoCloud() {
             {/* シームレス切り替え用の複製 */}
             <div className="flex gap-3 md:gap-4 px-1.5 md:px-2">
               {[
-                "プロサッカー", "鉄道・交通機関", "音楽ライブイベント", 
-                "メタバース", "広告キャンペーン", "効果測定", 
-                "タイムセール", "ペンライト", "立体シール"
+                "同人イベント", "ゲーム実況", "歌ってみた", 
+                "リリース記念", "推し活", "ファンクラブ特典", 
+                "オンラインファンミ", "舞台・ミュージカル", "メタバース"
               ].map((tag, i) => (
                 <div key={`r2-2-${i}`} className="group flex items-center justify-center px-5 py-2.5 rounded-full border border-border bg-surface shadow-sm hover:border-accent hover:shadow-[0_0_15px_rgba(255,59,124,0.2)] transition-all duration-300 cursor-default hover:-translate-y-0.5 whitespace-nowrap shrink-0">
                    <span className="text-accent/60 group-hover:text-accent group-hover:drop-shadow-[0_0_8px_var(--color-accent)] transition-all duration-300 mr-1 font-bold">#</span>

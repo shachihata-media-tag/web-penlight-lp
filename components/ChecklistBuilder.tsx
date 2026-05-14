@@ -5,25 +5,23 @@ import { cn } from "@/lib/utils";
 import { Check, ChevronRight, FileText } from "lucide-react";
 
 export function ChecklistBuilder() {
-  const [audience, setAudience] = useState<"small" | "medium" | "large">("medium");
-  const [streaming, setStreaming] = useState<boolean>(false);
-  const [line, setLine] = useState<boolean>(false);
+  const [audience, setAudience] = useState<"small" | "medium" | "large">("small");
+  const [streaming, setStreaming] = useState<boolean>(true);
 
-  // Simple Logic
+  // Simple Logic for Goods Production
   const steps = [
-    { title: "ヒアリング・要件定義", owner: "Shachihata", weeks: "Week 1" },
-    { title: "ロゴ素材・音源受領", owner: "Client", weeks: "Week 1-2" },
-    { title: "LP・演出データ制作", owner: "Shachihata", weeks: "Week 2-3" },
-    { title: "テスト配信・動作確認", owner: "Joint", weeks: "Week 3" },
-    ...(streaming ? [{ title: "配信エンコードテスト", owner: "Joint", weeks: "Week 3" }] : []),
-    ...(line ? [{ title: "LINE公式アカウント連携設定", owner: "Client", weeks: "Week 2" }] : []),
-    { title: "本番運用", owner: "Joint", weeks: "Event Day" },
+    { title: "無料見積もり・ヒアリング", owner: "Client", weeks: "お問い合わせ" },
+    { title: "仕様・デザインのお打ち合わせ", owner: "Joint", weeks: "ご契約前" },
+    { title: "デザインデータ・音源受領", owner: "Client", weeks: "Week 1" },
+    { title: "グッズ制作・システム設定", owner: "Shachihata", weeks: "Week 2-4" },
+    ...(streaming ? [{ title: "配信テスト・動作確認", owner: "Joint", weeks: "納品前" }] : []),
+    { title: "納品・イベント本番", owner: "Joint", weeks: "Event Day" },
   ];
 
   return (
     <section className="py-24 bg-transparent border-y border-border/50">
       <div className="container-custom">
-        <h2 className="text-3xl font-bold mb-12 text-center text-text">導入までの流れ</h2>
+        <h2 className="text-3xl font-bold mb-12 text-center text-text">オリジナルグッズ制作・導入の流れ</h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           {/* Controls */}
@@ -35,7 +33,7 @@ export function ChecklistBuilder() {
                
                <div className="space-y-6">
                  <div>
-                   <label className="text-xs text-muted block mb-2">想定規模</label>
+                   <label className="text-xs text-muted block mb-2">想定制作ロット</label>
                    <div className="grid grid-cols-3 gap-2">
                      {(["small", "medium", "large"] as const).map((s) => (
                        <button
@@ -48,14 +46,14 @@ export function ChecklistBuilder() {
                              : "bg-surface border-border text-muted hover:border-accent/50 hover:text-text"
                          )}
                        >
-                         {s === "small" ? "~500" : s === "medium" ? "~5000" : "5000~"}
+                         {s === "small" ? "小ロット" : s === "medium" ? "中ロット" : "大ロット"}
                        </button>
                      ))}
                    </div>
                  </div>
 
                  <div>
-                    <label className="text-xs text-muted block mb-2">配信連動</label>
+                    <label className="text-xs text-muted block mb-2">配信連動の利用</label>
                     <div className="flex items-center gap-3">
                       <button
                         onClick={() => setStreaming(!streaming)}
@@ -70,25 +68,6 @@ export function ChecklistBuilder() {
                         )} />
                       </button>
                       <span className="text-sm">{streaming ? "あり" : "なし"}</span>
-                    </div>
-                 </div>
-
-                 <div>
-                    <label className="text-xs text-muted block mb-2">LINE連携</label>
-                    <div className="flex items-center gap-3">
-                      <button
-                        onClick={() => setLine(!line)}
-                        className={cn(
-                          "w-12 h-6 rounded-full transition-colors relative",
-                          line ? "bg-[#06C755]" : "bg-border"
-                        )}
-                      >
-                        <div className={cn(
-                          "absolute top-1 left-1 w-4 h-4 bg-white rounded-full transition-transform",
-                          line ? "translate-x-6" : "translate-x-0"
-                        )} />
-                      </button>
-                      <span className="text-sm font-bold text-text">{line ? "あり" : "なし"}</span>
                     </div>
                  </div>
                </div>
@@ -115,7 +94,7 @@ export function ChecklistBuilder() {
                      step.owner === "Client" ? "border-border text-muted bg-surface2" :
                      "border-accent2/30 text-accent2 bg-accent2/5"
                    )}>
-                     {step.owner}
+                     {step.owner === "Shachihata" ? "シヤチハタ" : step.owner === "Client" ? "お客様" : "共同"}
                    </div>
                  </div>
                ))}
@@ -123,8 +102,8 @@ export function ChecklistBuilder() {
             <div className="mt-8 p-4 bg-accent/5 border border-accent/20 rounded-lg flex items-start gap-3">
               <FileText className="text-accent flex-shrink-0 mt-0.5" size={18} />
               <p className="text-xs text-muted leading-relaxed">
-                ※ 最短5営業日で納品可能です（素材受領後）。<br/>
-                ※ 上記はモデルケースです。詳細なスケジュールはお問い合わせ後にご提案します。
+                ※ グッズの仕様やロット数により制作期間は変動します。<br/>
+                ※ 上記はモデルケースです。詳細なスケジュールはお見積り時にご提案します。
               </p>
             </div>
           </div>

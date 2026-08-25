@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "penlight-lp-dev",
+      "runtimeExecutable": "pnpm",
+      "runtimeArgs": ["dev", "--", "-p", "3100"],
+      "port": 3100
+    }
+  ]
+}

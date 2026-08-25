@@ -17,13 +17,6 @@ export function Header() {
           <Link href='#features' className='text-muted hover:text-text transition-colors'>
             特徴
           </Link>
-          <Link href='#demos' className='text-muted hover:text-text transition-colors'>
-            デモ・体験
-          </Link>
-
-          <Link href='#faq' className='text-muted hover:text-text transition-colors'>
-            FAQ
-          </Link>
         </nav>
 
         {/* Actions */}

@@ -94,9 +94,8 @@ export const COMPARISON_DATA = {
   rows: [
     { aspect: "ファンとの一体感", bluetooth: "△ 映像とコメントのみ", acoustic: "◎ 配信の音に合わせてグッズが光る" },
     { aspect: "グッズの独自性", bluetooth: "△ デザイン勝負になりがち", acoustic: "◎ 『光と音の連動』という新しい付加価値" },
-    { aspect: "ファンの利用ハードル", bluetooth: "専用アプリが必要な場合が多い", acoustic: "QRを読み込むだけ（アプリ不要）" },
-    { aspect: "アーカイブ視聴", bluetooth: "× リアルタイムのみ対応", acoustic: "◎ アーカイブ動画でも連動して光る" },
-    { aspect: "最小ロット", bluetooth: "数千〜数万個の大量発注が必要", acoustic: "立体シールなら小ロットから対応可能" },
+    { aspect: "アーカイブ視聴", bluetooth: "× 会場限定、リアルタイムのみ対応", acoustic: "◎ アーカイブ動画でも連動して光る" },
+    { aspect: "最小ロット", bluetooth: "数千〜数万個の大量発注が必要", acoustic: "小ロットから対応可能" },
   ],
 } as const;
 

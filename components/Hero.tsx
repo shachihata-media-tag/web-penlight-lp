@@ -1,22 +1,8 @@
-"use client";
-
-import { useState } from "react";
-import { TorchSimulator, TorchSimulatorProps } from "./TorchSimulator";
-import { PhoneSimulator } from "./PhoneSimulator";
-import { PENLIGHT_COLORS } from "@/lib/constants";
-import { cn } from "@/lib/utils";
-import { ArrowRight, Play, Settings2 } from "lucide-react";
+import { ImageSlideshow } from "./ImageSlideshow";
+import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 export function Hero() {
-  const [activeColor, setActiveColor] = useState<string>(PENLIGHT_COLORS[0].value);
-  const [pattern, setPattern] = useState<TorchSimulatorProps["pattern"]>("steady");
-  const [status, setStatus] = useState<TorchSimulatorProps["status"]>("detecting");
-  const [mode, setMode] = useState<"venue" | "stream">("venue");
-  const [activeTab, setActiveTab] = useState<"torch" | "screen">("torch");
-
-  const toggleMode = () => setMode((p) => (p === "venue" ? "stream" : "venue"));
-
   return (
     <section id="hero" className="relative z-0 pt-32 pb-20 overflow-hidden min-h-screen flex items-center">
       
@@ -49,30 +35,24 @@ export function Hero() {
           <h1 className="text-4xl md:text-5xl xl:text-6xl font-bold leading-tight text-white relative">
             <span className="sr-only">推し活グッズ・音響連動グッズ制作｜スマホ用立体シールを小ロットから</span>
             <span aria-hidden="true" className="block">
-              あなたの「音」が<br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-[#FF8C00]">グッズ</span>になる。<br />
-              <span className="inline-block whitespace-nowrap text-3xl md:text-4xl xl:text-5xl mt-2">次世代の推し活グッズ制作</span>
+              音のしるしで、<br />
+              配信に<span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-[#FF8C00]">魔法</span>を。<br />
+              <span className="inline-block whitespace-nowrap text-3xl md:text-4xl xl:text-5xl mt-2">次世代の推し活グッズ</span>
             </span>
           </h1>
 
-          <p className="text-lg text-white/70 max-w-xl leading-relaxed">
-            スマホ用立体シールなら<br className="md:hidden" />オリジナルデザインで小ロットから制作可能。<br className="hidden md:block" />
-            プロ野球ドームで採用されるシヤチハタの音響連動技術を、<br className="md:hidden" />
-            あなたの配信や小規模ライブでも。
-          </p>
-
           <div className="flex flex-wrap gap-4 pt-4">
              <Link
-               href="#demos"
+               href="#contact"
                className="flex items-center justify-center px-8 py-4 text-sm font-bold text-white bg-pink-500 rounded-md hover:bg-pink-600 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
                style={{ whiteSpace: "nowrap" }}
              >
-               デモを体験
+               資料請求
                <ArrowRight className="w-4 h-4 ml-2" />
              </Link>
           </div>
 
-          <div className="grid grid-cols-3 gap-4 pt-8 border-t border-white/20">
+          <div className="grid grid-cols-2 gap-4 pt-8 border-t border-white/20">
              <div className="text-white">
                <div className="text-2xl font-bold mb-1">0秒</div>
                <div className="text-xs text-white/70">アプリDL不要<br/>即座に反応</div>
@@ -81,10 +61,6 @@ export function Hero() {
                <div className="text-2xl font-bold mb-1">∞</div>
                <div className="text-xs text-white/70">会場・配信<br/>どこでも連動</div>
              </div>
-             <div className="text-white">
-               <div className="text-2xl font-bold mb-1">少部数</div>
-               <div className="text-xs text-white/70">立体シールなら<br/>小ロット対応</div>
-             </div>
           </div>
 
           <div className="mt-2">
@@ -92,120 +68,21 @@ export function Hero() {
           </div>
         </div>
 
-        {/* Right: Simulator + Controls */}
         <div className="lg:col-span-5 flex flex-col items-center order-1 lg:order-2">
-          
-          {/* Simulator View Toggle */}
-          <div className="flex items-center gap-1 bg-black/50 backdrop-blur-md p-1 rounded-full border border-white/20 mb-8 relative z-20 shadow-xl">
-             <button
-               onClick={() => setActiveTab("torch")}
-               className={cn(
-                 "px-4 py-1.5 rounded-full text-xs font-bold transition-all",
-                 activeTab === "torch" ? "bg-accent text-white shadow-sm" : "text-white/60 hover:text-white"
-               )}
-             >
-               背面 (Torch)
-             </button>
-             <button
-               onClick={() => setActiveTab("screen")}
-               className={cn(
-                 "px-4 py-1.5 rounded-full text-xs font-bold transition-all",
-                 activeTab === "screen" ? "bg-accent text-white shadow-sm" : "text-white/60 hover:text-white"
-               )}
-             >
-               表面 (Screen)
-             </button>
+          <div className="relative w-full max-w-md aspect-square overflow-hidden rounded-3xl border border-white/30 bg-neutral-300/70 backdrop-blur-md shadow-2xl">
+            <ImageSlideshow
+              images={[
+                "/images/9_L.Bl.jpg",
+                "/images/4_pink.jpg",
+                "/images/13_L.Yellow.jpg",
+              ]}
+              interval={2200}
+              altPrefix="色が切り替わる音響連動型ペンライト"
+              imageClassName="object-contain scale-[1.22] mix-blend-multiply"
+            />
           </div>
-
-          <div className="relative">
-             {activeTab === "torch" ? (
-               <TorchSimulator
-                 color={activeColor}
-                 pattern={pattern}
-                 status={status}
-                 className="transform scale-90 md:scale-100 transition-transform"
-               />
-             ) : (
-               <PhoneSimulator
-                 color={activeColor}
-                 pattern={pattern}
-                 status={status}
-                 className="transform scale-90 md:scale-100 transition-transform"
-               />
-             )}
-             
-             {/* Floating Controls for Demo A */}
-             <div className="absolute -right-12 top-1/2 -translate-y-1/2 flex flex-col gap-3 p-3 bg-black/50 backdrop-blur-md border border-white/20 rounded-2xl shadow-subtle">
-                <div className="flex flex-col gap-1">
-                  <span className="text-[10px] text-white/70 text-center font-bold mb-1">
-                    {activeTab === "torch" ? "シール" : "COLOR"}
-                  </span>
-                  {PENLIGHT_COLORS.slice(0, 5).map((c) => (
-                    <button
-                      key={c.name}
-                      onClick={() => {
-                        setActiveColor(c.value);
-                        setStatus("synced");
-                      }}
-                      className={cn(
-                        "w-8 h-8 rounded-full border-2 transition-transform hover:scale-110",
-                        activeColor === c.value ? "border-white scale-110" : "border-transparent"
-                      )}
-                      style={{ backgroundColor: c.value }}
-                      title={c.name}
-                      aria-label={`カラーを${c.name}に変更`}
-                    />
-                  ))}
-                  <button
-                     onClick={() => {
-                       setActiveColor("#000000");
-                       setStatus("waiting");
-                     }}
-                     className="w-8 h-8 rounded-full border border-white/20 bg-white/10 flex items-center justify-center text-[8px] text-white hover:border-white"
-                  >OFF</button>
-                </div>
-                
-                <div className="h-px bg-white/20 w-full my-1" />
-
-                <div className="flex flex-col gap-1">
-                  <span className="text-[10px] text-white/70 text-center font-mono">MODE</span>
-                   <button
-                     onClick={() => setPattern((p) => p === "steady" ? "blink" : "steady")}
-                     className={cn(
-                       "w-8 h-8 rounded-lg flex items-center justify-center transition-colors",
-                       pattern === "blink" ? "bg-accent text-white" : "bg-white/10 text-white"
-                     )}
-                   >
-                     <Settings2 size={14} />
-                   </button>
-                </div>
-             </div>
-          </div>
-          
-          <div className="mt-8 flex items-center gap-4 bg-black/50 p-1 rounded-full border border-white/20">
-             <button
-               onClick={() => { setMode("venue"); setStatus("detecting"); }}
-               className={cn(
-                 "px-6 py-2 rounded-full text-xs font-bold transition-all",
-                 mode === "venue" ? "bg-accent text-white shadow-sm" : "text-white/60 hover:text-white"
-               )}
-             >
-               会場モード
-             </button>
-             <button
-               onClick={() => { setMode("stream"); setStatus("detecting"); }}
-               className={cn(
-                 "px-6 py-2 rounded-full text-xs font-bold transition-all",
-                 mode === "stream" ? "bg-accent text-white shadow-sm" : "text-white/60 hover:text-white"
-               )}
-             >
-               配信モード
-             </button>
-          </div>
-          <p className="mt-4 text-xs text-white/70 text-center max-w-xs">
-            {mode === "venue" 
-              ? "登録済みの音響に連動して光ります" 
-              : "PCやTVから流れる配信音声に反応して同期します。"}
+          <p className="mt-4 text-xs font-medium tracking-wide text-white/70">
+            音に合わせてペンライトのカラーが切り替わります
           </p>
         </div>
       </div>

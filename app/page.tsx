@@ -6,20 +6,15 @@ import { WhatIsPenlight } from "@/components/WhatIsPenlight";
 import { LogoCloud } from "@/components/LogoCloud";
 import { ProductLineup } from "@/components/ProductLineup";
 import { MobileStickyCTA } from "@/components/MobileStickyCTA";
-import { ProblemSolution } from "@/components/ProblemSolution";
 import { ComparisonTable } from "@/components/ComparisonTable";
 import { Walkthrough } from "@/components/Walkthrough";
 import { VideoCard } from "@/components/VideoCard";
 import { Presets } from "@/components/Presets";
-import { Specs } from "@/components/Specs";
 import { Customization } from "@/components/Customization";
 import { MiniEstimator } from "@/components/MiniEstimator";
 import { ChecklistBuilder } from "@/components/ChecklistBuilder";
-import { LineSection } from "@/components/LineSection";
-import { FAQ } from "@/components/FAQ";
 import { ContactForm } from "@/components/ContactForm";
 import { SalesforceScript } from "@/components/SalesforceScript";
-import { DemoSection } from "@/components/DemoSection";
 
 export default function Home() {
   return (
@@ -36,8 +31,6 @@ export default function Home() {
 
       <ProductLineup />
       
-      <ProblemSolution />
-
       <ComparisonTable />
       
       {/* <Walkthrough /> */}
@@ -55,19 +48,11 @@ export default function Home() {
         </div>
       </section>
 
-      <DemoSection />
-
-      <Specs />
-      
       {/* <Customization /> */}
 
       {/* <MiniEstimator /> */}
 
-      <LineSection />
-
       <ChecklistBuilder />
-
-      <FAQ />
 
       <ContactForm />
       

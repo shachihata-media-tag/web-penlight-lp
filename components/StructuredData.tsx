@@ -1,4 +1,4 @@
-import { FAQS, SITE_METADATA, COMPARISON_DATA, STATISTICS } from "@/lib/constants";
+import { SITE_METADATA, COMPARISON_DATA, STATISTICS } from "@/lib/constants";
 
 export const StructuredData = () => {
   const baseUrl = SITE_METADATA.url;
@@ -115,19 +115,6 @@ export const StructuredData = () => {
     },
   };
 
-  const faqData = {
-    "@type": "FAQPage",
-    "@id": `${baseUrl}/#faq`,
-    mainEntity: FAQS.map((faq) => ({
-      "@type": "Question",
-      name: faq.q,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: faq.a,
-      },
-    })),
-  };
-
   const breadcrumbData = {
     "@type": "BreadcrumbList",
     "@id": `${baseUrl}/#breadcrumb`,
@@ -222,32 +209,20 @@ export const StructuredData = () => {
   const itemListData = {
     "@type": "ItemList",
     "@id": `${baseUrl}/#product-lineup`,
-    name: "音響連動グッズ 製品ラインナップ｜立体シール・ペンライト・アクスタ",
-    description: "シヤチハタの音響連動グッズ全ラインナップ。スマホ用立体シール（小ロット対応）、スマホペンライト、物理ペンライト、光るアクスタ（アクリルスタンド）の4製品を展開。",
+    name: "音響連動グッズ 製品ラインナップ｜ペンライト・アクスタ",
+    description: "シヤチハタの音響連動グッズラインナップ。物理ペンライトと光るアクスタ（アクリルスタンド）を展開。",
     itemListOrder: "https://schema.org/ItemListOrderDescending",
-    numberOfItems: 4,
+    numberOfItems: 2,
     itemListElement: [
       {
         "@type": "ListItem",
         position: 1,
-        name: "音響連動型スマホライト＆立体シール",
-        description: "スマホの背面フラッシュライトを音響信号で制御し、推し活デコシールを貼って楽しむ新体験。物販グッズとして展開可能。",
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
         name: "音響連動型物理ペンライト",
         description: "推し活に欠かせない物理ペンライトも音響連動に対応。Bluetoothを使わない音響制御で、ドーム5万人規模でも安定同期。",
       },
       {
         "@type": "ListItem",
-        position: 3,
-        name: "音響連動スマホペンライト",
-        description: "アプリダウンロード不要・無料でスマホがペンライトに変わる。QRコードで即参加、14色の推しカラーに対応。",
-      },
-      {
-        "@type": "ListItem",
-        position: 4,
+        position: 2,
         name: "音響連動アクスタ（光るアクリルスタンド）",
         description: "推しのアクスタが音楽に合わせて自動で光る。自宅での配信視聴を最前列の体験に変える推し活グッズ。",
       },
@@ -287,7 +262,6 @@ export const StructuredData = () => {
       organizationData,
       articlePageData,
       productData,
-      faqData,
       breadcrumbData,
       videoData,
       howToData,

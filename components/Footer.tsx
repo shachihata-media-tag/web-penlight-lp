@@ -27,16 +27,6 @@ export function Footer() {
                   製品ラインナップ
                 </Link>
               </li>
-              <li>
-                <Link href='#demos' className='hover:text-text transition-colors'>
-                  デモ体験
-                </Link>
-              </li>
-              <li>
-                <Link href='#demos' className='hover:text-text transition-colors'>
-                  デモ体験
-                </Link>
-              </li>
             </ul>
           </nav>
           <nav aria-label="企業情報ナビゲーション">

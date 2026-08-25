@@ -14,19 +14,19 @@
 
 ### 必要な環境
 
-- Node.js 20以上
-- npm または yarn
+- Node.js 20.9以上（`.node-version` を参照）
+- pnpm 11
 
 ### インストール
 
 ```bash
-npm install
+pnpm install --frozen-lockfile
 ```
 
 ### 開発サーバーの起動
 
 ```bash
-npm run dev
+pnpm dev
 ```
 
 ブラウザで [http://localhost:3000](http://localhost:3000) を開いて確認できます。
@@ -36,13 +36,13 @@ npm run dev
 本番用のビルドを作成する場合：
 
 ```bash
-npm run build
+pnpm build
 ```
 
 ビルド後のサーバーを起動する場合：
 
 ```bash
-npm start
+pnpm start
 ```
 
 ## プロジェクト構造
@@ -73,10 +73,18 @@ npm start
 
 ## 開発コマンド
 
-- `npm run dev` - 開発サーバーを起動
-- `npm run build` - 本番用ビルドを作成
-- `npm run start` - 本番サーバーを起動
-- `npm run lint` - ESLintでコードをチェック
+- `pnpm dev` - 開発サーバーを起動
+- `pnpm build` - 本番用ビルドを作成
+- `pnpm start` - 本番サーバーを起動
+- `pnpm lint` - ESLintでコードをチェック
+- `pnpm typecheck` - TypeScriptの型をチェック
+- `pnpm check` - lint・型チェック・本番ビルドをまとめて実行
+
+### Codex・Claude Codeでの開発
+
+共通の作業ルールは `AGENTS.md` にあります。Claude Codeは `CLAUDE.md` から同じルールを参照します。
+環境変数が必要な場合は、
+`.env.example` を `.env.local` にコピーして値を設定してください。`.env.local` はGitにコミットされません。
 
 ## ライセンス
 

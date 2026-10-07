@@ -85,7 +85,7 @@ ${data.message || "なし"}
            <span className="text-accent text-sm font-bold tracking-widest uppercase mb-2 block">Contact</span>
            <h2 className="text-3xl font-bold mb-4 text-text">無料見積もり・サンプル請求</h2>
            <p className="text-muted text-sm">
-             スマホ用立体シールの小ロット制作やオリジナルグッズ制作のご相談、サンプル請求など、お気軽にお問い合わせください。<br/>
+             スマホペンライトの小ロット制作やオリジナルグッズ制作のご相談、サンプル請求など、お気軽にお問い合わせください。<br/>
              通常1営業日以内に担当者よりご連絡いたします。
            </p>
         </div>

@@ -17,7 +17,7 @@ export function LogoCloud() {
               {[
                 "大型音楽フェス", "VTuber配信", "オンラインライブ", 
                 "クラウドファンディング", "限定グッズ", "アクリルスタンド", 
-                "スマホペンライト", "立体シール", "プロ野球実績"
+                "スマホペンライト", "プロ野球実績"
               ].map((tag, i) => (
                 <div key={`r1-1-${i}`} className="group flex items-center justify-center px-5 py-2.5 rounded-full border border-border bg-surface shadow-sm hover:border-accent hover:shadow-[0_0_15px_rgba(255,59,124,0.2)] transition-all duration-300 cursor-default hover:-translate-y-0.5 whitespace-nowrap shrink-0">
                    <span className="text-accent/60 group-hover:text-accent group-hover:drop-shadow-[0_0_8px_var(--color-accent)] transition-all duration-300 mr-1 font-bold">#</span>
@@ -30,7 +30,7 @@ export function LogoCloud() {
               {[
                 "大型音楽フェス", "VTuber配信", "オンラインライブ", 
                 "クラウドファンディング", "限定グッズ", "アクリルスタンド", 
-                "スマホペンライト", "立体シール", "プロ野球実績"
+                "スマホペンライト", "プロ野球実績"
               ].map((tag, i) => (
                 <div key={`r1-2-${i}`} className="group flex items-center justify-center px-5 py-2.5 rounded-full border border-border bg-surface shadow-sm hover:border-accent hover:shadow-[0_0_15px_rgba(255,59,124,0.2)] transition-all duration-300 cursor-default hover:-translate-y-0.5 whitespace-nowrap shrink-0">
                    <span className="text-accent/60 group-hover:text-accent group-hover:drop-shadow-[0_0_8px_var(--color-accent)] transition-all duration-300 mr-1 font-bold">#</span>

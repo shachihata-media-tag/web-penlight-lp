@@ -33,7 +33,7 @@ export function Hero() {
           </div>
           
           <h1 className="text-4xl md:text-5xl xl:text-6xl font-bold leading-tight text-white relative">
-            <span className="sr-only">推し活グッズ・音響連動グッズ制作｜スマホ用立体シールを小ロットから</span>
+            <span className="sr-only">推し活グッズ・音響連動グッズ制作</span>
             <span aria-hidden="true" className="block">
               音のしるしで、<br />
               配信に<span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-[#FF8C00]">魔法</span>を。<br />
